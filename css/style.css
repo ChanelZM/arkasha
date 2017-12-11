@@ -53,17 +53,7 @@ body {
 .opening-word__word-list {
     display: inline;
 }
-.word-list {
-    position: absolute;
-    top: 10rem;
-    left: 10rem;
-}
-.word-list__item {
-    font-size: 7rem;
-    font-weight: bold;
-    transform: translate(0);
-}
-.insert-text, .word-list__item {
+.insert-text {
     position: relative;
     display: inline-block;
     height: 8rem;
@@ -72,7 +62,7 @@ body {
     text-align: center;
     cursor: pointer;
 }
-.insert-text::before, .word-list__item::before {
+.insert-text::before{
     position: absolute;
     height: 4rem;
     left: 0;
