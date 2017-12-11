@@ -2,6 +2,85 @@
 font-family: 'Didot', serif
 font-family: 'Prestige Elite Std', serif*/
 body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
     font-family: 'Cormorant Garamond', serif;
+    background-attachment: fixed;
     background-image: url('../img/arkasha.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 130vw auto;
+}
+[hidden], .hidden {
+    display: none !important;
+}
+.basic-nav {
+    margin: 0;
+    padding: 0;
+}
+.basic-nav__item {
+    display: inline-block;
+    list-style: none;
+}
+.basic-link, .basic-link:hover {
+    color: black;
+    text-decoration: none;
+}
+
+/* TOP NAV */
+.top-nav {
+    margin: 1rem 3rem 3rem 3rem;
+    font-size: 5rem;
+    order: 2;
+}
+.top-nav__item {
+    padding-right: 3rem;
+    font-weight: bold;
+}
+
+/* HOME */
+.opening-word {
+    margin: 0;
+    padding: 2rem 3rem;
+    font-size: 7rem;
+    font-weight: bold;
+    order: 1;
+}
+.opening-word__word-list {
+    display: inline;
+}
+.word-list {
+    position: absolute;
+    top: 10rem;
+    left: 10rem;
+    width: 30rem;
+    background-color: #fd7c4f;
+}
+.word-list__item {
+    font-size: 7rem;
+    font-weight: bold;
+    transform: translate(0);
+}
+.insert-text, .word-list__item {
+    position: relative;
+    display: inline-block;
+    height: 8rem;
+    width: 30rem;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+.insert-text::before, .word-list__item::before {
+    position: absolute;
+    height: 4rem;
+    left: 0;
+    right: 0;
+    bottom: -1rem;
+    background-color: #fd7c4f;
+    content: '';
+    z-index: -1;
 }
