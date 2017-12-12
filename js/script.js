@@ -14,7 +14,8 @@
         var i;
         for(i = 0; i < spans.length; i++){
             spans[i].addEventListener('mouseover', checkIfStillAnimating);
-            spans[i].innerHTML = ' ';
+            spans[i].innerHTML = '';
+            spans[i].style.minWidth = '17rem';
         }
     }
 
@@ -44,6 +45,8 @@
         num = 0;
 
         elem.classList.remove('animate-border');
+        elem.style.minWidth = '0px';
+
         loopThroughLetters(elem, 'add', word, word.length);
 
         setTimeout(function(){
