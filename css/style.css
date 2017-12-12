@@ -1,6 +1,10 @@
 /*#fd7c4f
 font-family: 'Didot', serif
 font-family: 'Prestige Elite Std', serif*/
+@keyframes blinkBorder{
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
 body {
     display: flex;
     flex-direction: column;
@@ -54,14 +58,20 @@ body {
     display: inline;
 }
 .insert-text {
+    padding: 0 1rem;
     position: relative;
     display: inline-block;
     height: 8rem;
-    min-width: 30rem;
     color: white;
+    border-right: 6px solid white;
     cursor: pointer;
+    background-color: #fd7c4f;
 }
-.insert-text::before{
+.animate-border {
+    border-right: 6px solid white;
+    animation: blinkBorder 500ms step-end infinite;
+}
+/*.insert-text::before{
     position: absolute;
     height: 4rem;
     left: 0;
@@ -70,4 +80,4 @@ body {
     background-color: #fd7c4f;
     content: '';
     z-index: -1;
-}
+}*/

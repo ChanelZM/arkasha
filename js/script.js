@@ -6,7 +6,7 @@
         count = -1,
         num = 0,
         isAnimating = false,
-        speed = 200;
+        speed = 90;
 
     var nextWord;
 
@@ -14,19 +14,19 @@
         var i;
         for(i = 0; i < spans.length; i++){
             spans[i].addEventListener('mouseover', checkIfStillAnimating);
-            spans[i].innerHTML = 'hover here';
+            spans[i].innerHTML = ' ';
         }
     }
 
     function checkIfStillAnimating(e){
         if(isAnimating == false){
-            hasElemHaveText(e);
+            doesElemHaveText(e);
         }
     }
 
-    function hasElemHaveText(e){
+    function doesElemHaveText(e){
         isAnimating = true;
-        e.target.innerHTML == 'hover here' ? getNextWord(e) : eraseWord(e, e.target.innerHTML);
+        e.target.innerHTML == '' ? getNextWord(e) : eraseWord(e, e.target.innerHTML);
     }
 
     function getNextWord(e){
@@ -43,10 +43,12 @@
     function typeWord(elem, word){
         num = 0;
 
+        elem.classList.remove('animate-border');
         loopThroughLetters(elem, 'add', word, word.length);
 
         setTimeout(function(){
             isAnimating = false;
+            elem.classList.add('animate-border');
         }, (speed * word.length));
     }
 
