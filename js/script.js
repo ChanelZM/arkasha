@@ -5,17 +5,38 @@
     var words = ['handelsbelemmering', 'aanstichting', 'smeernippel', 'vrachtlijst', 'spraakcentrum', 'doek', 'zuiderzon'],
         count = -1;
 
-    function insertNewWord(e){
-        count == (words.length - 1) ? count = 0: count++;
-        e.target.innerHTML = words[count];
-        console.log(e);
-    }
+    var nextWord;
 
     function init(){
         var i;
         for(i = 0; i < spans.length; i++){
-            spans[i].addEventListener('mouseover', insertNewWord);
+            spans[i].addEventListener('mouseover', hasElemHaveText);
         }
+    }
+
+    function hasElemHaveText(e){
+        e.target.innerHTML == '' ? getNextWord(e) : eraseWord(e);
+    }
+
+    function getNextWord(e){
+        count == (words.length - 1) ? count = 0: count++;
+        nextWord = words[count];
+        e.target.innerHTML = '';
+
+        typeWord(nextWord);
+    }
+
+    function typeWord(word){
+        //Type word in span
+    }
+
+    function eraseWord(e){
+        //Erase word in span
+        //Then type word again
+    }
+
+    function animateWord(elem, type){
+        //Animate word depending on erasing or typing
     }
 
     init();
