@@ -61,8 +61,8 @@ body {
     padding: 0 1rem;
     position: relative;
     display: inline-block;
-    height: 8rem;
     min-width: 12rem;
+    min-height: 6rem;
     color: white;
     border-right: 6px solid white;
     cursor: pointer;
