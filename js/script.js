@@ -2,7 +2,20 @@
 (function(){
     var spans = document.querySelectorAll('.insert-text');
 
-    var words = ['handelsbelemmering', 'aanstichting', 'smeernippel', 'vrachtlijst', 'spraakcentrum', 'doek', 'zuiderzon'],
+    var words = {
+            name: ['Arkasha Keysers', 'Kash'],
+            profession: ['journaliste', 'schrijver', 'copywriter'],
+            write: ['artikels', 'verhalen', 'websites'],
+            passion: ['vragen stellen', 'luisteren', 'gevoeligheden detecteren', 'doorvragen'],
+            language: ['Nederlands', 'Spaans', 'Duits', 'Engels'],
+            admire: ['Bewondering', 'Verwondering'],
+            topic: ['creativiteit', 'andere culturen', 'mensen met talent'],
+            question: ['relaties', 'uitgesproken persoonlijkheden', 'creatieve projecten'],
+            place: ['Antwerpen', 'Barcelona', 'Zuid-Amerika'],
+            style: ['gevat', 'raak', 'nuchter', 'beschouwend'],
+            contact: ['bellen', 'mailen', 'skypen'],
+            project: ['zakelijk voorstel', 'goed verhaal', 'festival ticket', 'buitenlands project']
+        },
         count = -1,
         num = 0,
         isAnimating = false,
@@ -14,67 +27,64 @@
         var i;
         for(i = 0; i < spans.length; i++){
             spans[i].addEventListener('mouseover', checkIfStillAnimating);
-            spans[i].innerHTML = '';
-            spans[i].style.minWidth = '17rem';
         }
     }
 
+    //The animation can't be triggered again during an animation
     function checkIfStillAnimating(e){
         if(isAnimating == false){
-            doesElemHaveText(e);
+            eraseWord(e, e.target.innerHTML, e.target.id);
         }
     }
 
-    function doesElemHaveText(e){
+    //Call function that will erase the word that's already there
+    function eraseWord(e, prevWord, id){
         isAnimating = true;
-        e.target.innerHTML == '' ? getNextWord(e) : eraseWord(e, e.target.innerHTML);
+        num = prevWord.length;
+
+        loopThroughLetters(e.target, 'subtract', prevWord, 0, id);
     }
 
-    function getNextWord(e){
-        var elem = e.target || e;
+    function loopThroughLetters(elem, type, word, max, id){
+        //If the goal is to add a word, add one letter everytime, otherwise remove one letter
+        type == 'add' ? num++ : num--;
 
-        count == (words.length - 1) ? count = 0: count++;
-        nextWord = words[count];
+        elem.innerHTML = word.substring (0, num);
 
-        elem.innerHTML = '';
-
-        typeWord(elem, nextWord);
+        //This function will be called over and over until the word is written or totally erased
+        setTimeout(function(){
+            if(type == 'add' && num < max){
+                loopThroughLetters(elem, type, word, max, id);
+            } else if(type == 'subtract' && num > max){
+                loopThroughLetters(elem, type, word, max, id);
+            } else if(type == 'subtract' && num == max){
+                getNextWord(elem, id);
+            }
+        }, speed);
     }
 
-    function typeWord(elem, word){
+    //Get a new word to be written in the html
+    function getNextWord(elem, id){
+        console.log(id);
+        count = Math.floor(Math.random() * words[id].length);
+        nextWord = words[id][count];
+
+        typeWord(elem, nextWord, id);
+    }
+
+    function typeWord(elem, word, id){
         num = 0;
 
         elem.classList.remove('animate-border');
         elem.style.minWidth = '0px';
 
-        loopThroughLetters(elem, 'add', word, word.length);
+        loopThroughLetters(elem, 'add', word, word.length, id);
 
+        //After the animation, another animation can start again
         setTimeout(function(){
             isAnimating = false;
             elem.classList.add('animate-border');
         }, (speed * word.length));
-    }
-
-    function eraseWord(e, prevWord){
-        num = prevWord.length;
-
-        loopThroughLetters(e.target, 'subtract', prevWord, 0);
-    }
-
-    function loopThroughLetters(elem, type, word, max){
-        type == 'add' ? num++ : num--;
-
-        elem.innerHTML = word.substring (0, num);
-
-        setTimeout(function(){
-            if(type == 'add' && num < max){
-                loopThroughLetters(elem, type, word, max);
-            } else if(type == 'subtract' && num > max){
-                loopThroughLetters(elem, type, word, max);
-            } else if(type == 'subtract' && num == max){
-                getNextWord(elem);
-            }
-        }, speed);
     }
 
     init();
