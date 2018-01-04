@@ -2,20 +2,7 @@
 (function(){
     var spans = document.querySelectorAll('.insert-text');
 
-    var words = {
-            name: ['Arkasha Keysers', 'Kash'],
-            profession: ['journaliste', 'schrijver', 'copywriter'],
-            write: ['artikels', 'verhalen', 'websites'],
-            passion: ['vragen stellen', 'luisteren', 'gevoeligheden detecteren', 'doorvragen'],
-            language: ['Nederlands', 'Spaans', 'Duits', 'Engels'],
-            admire: ['Bewondering', 'Verwondering'],
-            topic: ['creativiteit', 'andere culturen', 'mensen met talent'],
-            question: ['relaties', 'uitgesproken persoonlijkheden', 'creatieve projecten'],
-            place: ['Antwerpen', 'Barcelona', 'Zuid-Amerika'],
-            style: ['gevat', 'raak', 'nuchter', 'beschouwend'],
-            contact: ['bellen', 'mailen', 'skypen'],
-            project: ['zakelijk voorstel', 'goed verhaal', 'festival ticket', 'buitenlands project']
-        },
+    var words = {},
         count = -1,
         num = 0,
         isAnimating = false,
@@ -26,8 +13,18 @@
     function init(){
         var i;
         for(i = 0; i < spans.length; i++){
+            Arrify(spans[i], spans[i].id);
+
+            //Refill HTML with only a single word
+            spans[i].innerHTML = words[spans[i].id][0];
+
             spans[i].addEventListener('mouseover', checkIfStillAnimating);
         }
+    }
+
+    //Get every word out of the html and make an array of it
+    function Arrify(el, id){
+        words[id] = el.innerHTML.split('/');
     }
 
     //The animation can't be triggered again during an animation
@@ -65,7 +62,6 @@
 
     //Get a new word to be written in the html
     function getNextWord(elem, id){
-        console.log(id);
         count = Math.floor(Math.random() * words[id].length);
         nextWord = words[id][count];
 
