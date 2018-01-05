@@ -1,6 +1,6 @@
 /*jslint browser: true, devel: true, eqeq: true, plusplus: true, sloppy: true, vars: true, white: true*/
 (function(){
-    var spans = document.querySelectorAll('.insert-text');
+    var homeTypingText = document.querySelectorAll('.insert-text');
 
     var words = {},
         count = -1,
@@ -12,24 +12,26 @@
 
     function init(){
         var i;
-        for(i = 0; i < spans.length; i++){
-            Arrify(spans[i], spans[i].id);
+
+        for(i = 0; i < homeTypingText.length; i++){
+            splitToArray(homeTypingText[i], homeTypingText[i].id);
 
             //Refill HTML with only a single word
-            spans[i].innerHTML = words[spans[i].id][0];
+            homeTypingText[i].innerHTML = words[homeTypingText[i].id][0];
 
-            spans[i].addEventListener('mouseover', checkIfStillAnimating);
+            homeTypingText[i].addEventListener('mouseover', checkIfStillAnimating);
         }
     }
 
     //Get every word out of the html and make an array of it
-    function Arrify(el, id){
+    function splitToArray(el, id){
         words[id] = el.innerHTML.split('/');
     }
 
     //The animation can't be triggered again during an animation
     function checkIfStillAnimating(e){
         if(isAnimating == false){
+            e.target.classList.add('animate-border');
             eraseWord(e, e.target.innerHTML, e.target.id);
         }
     }
@@ -71,7 +73,6 @@
     function typeWord(elem, word, id){
         num = 0;
 
-        elem.classList.remove('animate-border');
         elem.style.minWidth = '0px';
 
         loopThroughLetters(elem, 'add', word, word.length, id);
@@ -79,7 +80,7 @@
         //After the animation, another animation can start again
         setTimeout(function(){
             isAnimating = false;
-            elem.classList.add('animate-border');
+            elem.classList.remove('animate-border');
         }, (speed * word.length));
     }
 

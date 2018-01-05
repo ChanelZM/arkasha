@@ -12,6 +12,10 @@ font-family: 'Prestige Elite Std', serif*/
     src: url('../fonts/larish_neue_italic.otf');
     font-style: italic;
 }
+@font-face {
+    font-family: 'Larish Alte';
+    src: url('../fonts/larish_alte_semibold-webfont.otf');
+}
 @keyframes blinkBorder{
     from, to { border-color: transparent }
     50% { border-color: white; }
@@ -71,20 +75,19 @@ body {
     left: 0;
     right: 0;
     margin: 7rem 5vw 3rem 5vw;
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     z-index: 1;
 }
 .top-nav__item {
-    padding-right: 3rem;
+    padding-left: 3rem;
 }
 .home-button {
     margin: 0;
-    font-size: 3.2rem;
+    font-size: 2.8rem;
 }
  .current-page::before {
      right: -1rem;
      bottom: 1.5rem;
-     height: 3.5rem;
  }
 
 /* HOME */
@@ -101,7 +104,6 @@ body {
 .insert-text {
     position: relative;
     display: inline-block;
-    border-right: 6px solid white;
     cursor: pointer;
 }
 .animate-border {
@@ -116,6 +118,8 @@ body {
     flex-direction: row; */
     height: 100vh;
     width: 100vw;
+}
+.projects-js {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
@@ -177,15 +181,17 @@ body {
 }
 .project__title-span:first-of-type::after {
     position: absolute;
+    top: -4rem;
     left: -7rem;
-    content: '"';
-    font-family: 'Sorts Mill Goudy', serif;
+    content: '“';
+    font-family: 'Larish Alte', serif;
 }
 .project__title-span:last-of-type::after {
     position: absolute;
+    top: -4rem;
     right: -8rem;
-    content: '"';
-    font-family: 'Sorts Mill Goudy', serif;
+    content: '”';
+    font-family: 'Larish Alte', serif;
 }
 .project__client-wrap {
     position: absolute;
@@ -198,4 +204,23 @@ body {
     margin-top: 0.5rem;
     font-size: 2.3rem;
     display: block;
+}
+.slider-handlers__arrow {
+    height: 6rem;
+    width: 6rem;
+    position: fixed;
+    top: 50%;
+    background-color: #FB0D1B;
+    color: white;
+    transform: translateY(-50%);
+}
+.slider-handlers__arrow:hover {
+    background-color: #FDD430;
+    cursor: pointer;
+}
+#prev-arrow {
+    left: 5vw;
+}
+#next-arrow {
+    right: 5vw;
 }
