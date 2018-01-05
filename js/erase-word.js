@@ -3,12 +3,13 @@
     var homeTypingText = document.querySelectorAll('.insert-text');
 
     var words = {},
-        count = -1,
         num = 0,
         isAnimating = false,
         speed = 90;
 
-    var nextWord;
+    var prevWord,
+        nextWord,
+        randNum;
 
     function init(){
         var i;
@@ -32,6 +33,7 @@
     function checkIfStillAnimating(e){
         if(isAnimating == false){
             e.target.classList.add('animate-border');
+            prevWord = e.target.innerHTML;
             eraseWord(e, e.target.innerHTML, e.target.id);
         }
     }
@@ -57,22 +59,24 @@
             } else if(type == 'subtract' && num > max){
                 loopThroughLetters(elem, type, word, max, id);
             } else if(type == 'subtract' && num == max){
-                getNextWord(elem, id);
+                comparePrevAndNextWord(elem, id);
             }
         }, speed);
     }
 
     //Get a new word to be written in the html
-    function getNextWord(elem, id){
-        count = Math.floor(Math.random() * words[id].length);
-        nextWord = words[id][count];
+    function comparePrevAndNextWord(elem, id){
+        randNum = Math.floor(Math.random() * words[id].length);
 
-        typeWord(elem, nextWord, id);
+        if(words[id][randNum] != prevWord){
+            typeWord(elem, words[id][randNum], id);
+        } else {
+            comparePrevAndNextWord(elem, id);
+        }
     }
 
     function typeWord(elem, word, id){
         num = 0;
-
         elem.style.minWidth = '0px';
 
         loopThroughLetters(elem, 'add', word, word.length, id);

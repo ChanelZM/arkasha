@@ -86,11 +86,13 @@
 
         //Start animation of first span
         num = spans[1].innerHTML.length;
+        spans[1].classList.add('animate-border');
         loopThroughLetters(spans[1], 'subtract', projectsInfo[prevNum].title[1], 0);
 
         //Start animation of second span
         setTimeout(function(){
             num = spans[0].innerHTML.length;
+            spans[0].classList.add('animate-border');
             loopThroughLetters(spans[0], 'subtract', projectsInfo[prevNum].title[0], 0);
         }, firstTimeoutTime);
 
@@ -133,18 +135,16 @@
         loopThroughLetters(elements[0], 'add', nextWord, nextWord.length);
 
         setTimeout(function(){
+            elements[0].classList.remove('animate-border');
             nextWord = projectsInfo[count].title[1];
             num = 0;
             loopThroughLetters(elements[1], 'add', nextWord, nextWord.length);
         }, firstTimeoutTime);
 
         setTimeout(function(){
-            resetAnimation();
+            elements[1].classList.remove('animate-border');
+            isAnimating = false;
         }, (firstTimeoutTime + secondTimeoutTime));
-    }
-
-    function resetAnimation(){
-        isAnimating = false;
     }
 
     init();
