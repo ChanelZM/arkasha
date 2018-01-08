@@ -447,7 +447,7 @@ body {
         font-size: 1.3rem;
     }
     .opening-word {
-        margin: -2rem 0 0 0;
+        margin: 0;
         padding: 0 1.4rem;
         font-size: 1.3rem;
         line-height: 1.7;
@@ -457,7 +457,8 @@ body {
     }
     .insert-text::before, .current-page::before, .project__title-span::before {
         height: 61%;
-        bottom: 50%;
+        bottom: 41%;
+        right: -0.2rem;
     }
     .current-page::before {
         right: -0.5rem;
@@ -467,7 +468,7 @@ body {
 
 @media screen and (max-width: 24rem){
     .opening-word {
-        margin: -5rem 0 0 0;
+        margin: -2rem 0 0 0;
         font-size: 1.2rem;
     }
     .top-nav {
@@ -481,4 +482,6 @@ body {
     .home {
         justify-content: flex-start;
     }
+    .opening-word {
+        margin: 5rem 0 0 0;
 }
