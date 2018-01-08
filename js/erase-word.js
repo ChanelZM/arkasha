@@ -20,7 +20,11 @@
             //Refill HTML with only a single word
             homeTypingText[i].innerHTML = words[homeTypingText[i].id][0];
 
-            homeTypingText[i].addEventListener('mouseover', checkIfStillAnimating);
+            if("ontouchstart" in document.documentElement == false){
+                homeTypingText[i].addEventListener('mouseover', checkIfStillAnimating);
+            } else {
+                homeTypingText[i].addEventListener('click', checkIfStillAnimating);
+            }
         }
     }
 

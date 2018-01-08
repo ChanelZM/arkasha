@@ -78,7 +78,7 @@ body {
     font-size: 2.8rem;
     z-index: 1;
 }
-.top-nav__item {
+.top-nav__link {
     padding-left: 3rem;
 }
 .home-button {
@@ -105,7 +105,6 @@ body {
 .insert-text {
     position: relative;
     display: inline-block;
-    cursor: pointer;
 }
 .animate-border {
     padding-right: 1rem;
@@ -136,6 +135,10 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
+    opacity: 1;
+    transition: 1s ease all;
+    transform: scale(1);
+    filter: blur(0px);
 }
 .project__img-left,
 .project__img-right {
@@ -223,6 +226,9 @@ body {
 #next-arrow {
     right: 5vw;
 }
+.projects-js .project__images {
+    opacity: 0;
+}
 
 /* CONTACT */
 .contact-wrap {
@@ -250,4 +256,198 @@ body {
 }
 .contact__data {
     margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 93rem) {
+    .home-button {
+        font-size: 2.5rem;
+    }
+    .top-nav {
+        margin: 5rem 5vw 3rem 5vw;
+        font-size: 2.5rem;
+    }
+    .opening-word {
+        padding: 2rem 12vw;
+        font-size: 2.5rem;
+    }
+    .animate-border {
+        padding-right: 0.7rem;
+    }
+    .insert-text::before,
+    .current-page::before,
+    .project__title-span::before {
+        height: 2rem;
+        right: -0.4rem;
+        bottom: 50%;
+    }
+}
+
+@media screen and (max-width: 78rem) {
+    .home-button, .top-nav {
+        font-size: 2.3rem;
+    }
+    .opening-word {
+        padding: 2rem 11vw;
+        font-size: 2.3rem;
+    }
+}
+
+@media screen and (max-width: 70rem) {
+    .top-nav, .opening-word, .home-button  {
+        font-size: 2.1rem;
+    }
+    .insert-text::before,
+    .current-page::before,
+    .project__title-span::before {
+        height: 1.8rem;
+        bottom: 48%;
+    }
+}
+
+@media screen and (max-width: 64rem) {
+    .top-nav, .opening-word, .home-button  {
+        font-size: 1.9rem;
+    }
+}
+
+@media screen and (max-width: 53rem) {
+    .home-button {
+        font-size: 1.6rem;
+    }
+    .top-nav {
+        font-size: 1.6rem;
+        margin: 3rem 5vw 2rem 5vw;
+    }
+    .opening-word {
+        margin: 4rem 0 0 0;
+        padding: 2rem 5vw;
+        font-size: 1.6rem;
+    }
+    .insert-text::before, .current-page::before, .project__title-span::before {
+        height: 61%;
+        bottom: 45%;
+    }
+    .current-page::before {
+        height: 88%;
+        right: -0.6rem;
+        bottom: 50%;
+    }
+}
+
+@media screen and (max-width: 53rem) and (orientation: portrait) {
+    .home-button {
+        font-size: 1.8rem;
+    }
+    .top-nav {
+        margin: 5rem 9vw 3rem 9vw;
+        font-size: 1.8rem;
+    }
+    .top-nav__link {
+        padding-left: 2rem;
+    }
+    .opening-word {
+        margin: 5rem 9vw 3rem 9vw;
+        padding: 0;
+        font-size: 1.8rem;
+    }
+    .insert-text::before,
+    .current-page::before,
+    .project__title-span::before {
+        left: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 44rem) {
+    .top-nav {
+        font-size: 1.4rem;
+        margin: 2rem 5vw 3rem 5vw;
+    }
+    .home-button {
+        font-size: 1.4rem;
+    }
+    .top-nav__link {
+        padding-left: 1rem;
+    }
+    .animate-border {
+        padding-right: 0;
+        border-right: 4px solid white;
+    }
+    .opening-word {
+        margin: 5rem 0 0 0;
+        padding: 2rem 6vw;
+        font-size: 1.4rem;
+    }
+    /* .insert-text::before, .current-page::before, .project__title-span::before {
+        height: 1.5rem;
+        left: 0.6rem;
+        bottom: 1.1rem;
+    } */
+    .current-page::before {
+        right: -0.5rem;
+        bottom: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 44rem) and (orientation: portrait){
+    .top-nav, .home-button {
+        font-size: 1.6rem;
+    }
+    .opening-word {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 37rem) and (orientation: portrait){
+    .top-nav, .home-button {
+        font-size: 1.4rem;
+    }
+    .opening-word {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 27rem){
+    .top-nav {
+        margin: 2rem 1.4rem 2rem 1.4rem;
+        font-size: 1.3rem;
+    }
+    .home-button {
+        font-size: 1.3rem;
+    }
+    .opening-word {
+        padding: 0 1.4rem;
+        font-size: 1.3rem;
+        line-height: 1.7;
+    }
+    .animate-border {
+        border-right: 3px solid white;
+    }
+    .insert-text::before, .current-page::before, .project__title-span::before {
+        height: 61%;
+        bottom: 50%;
+    }
+    .current-page::before {
+        right: -0.5rem;
+        bottom: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 24rem){
+    .opening-word {
+        font-size: 1.2rem;
+    }
+    .top-nav {
+        font-size: 1.2rem;
+    }
+    .home-button {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 21rem){
+    .home {
+        justify-content: flex-start;
+    }
+    .opening-word {
+        margin: 5rem 0 1rem 0;
+    }
 }
