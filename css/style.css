@@ -276,8 +276,8 @@ body {
     .insert-text::before,
     .current-page::before,
     .project__title-span::before {
-        height: 2rem;
-        right: -0.4rem;
+        height: 1.9rem;
+        right: -0.3rem;
         bottom: 50%;
     }
 }
@@ -292,6 +292,12 @@ body {
     }
 }
 
+@media screen and (max-width: 78rem) and (orientation: portrait) {
+    .top-nav, .opening-word, .home-button  {
+        font-size: 2.8rem;
+    }
+}
+
 @media screen and (max-width: 70rem) {
     .top-nav, .opening-word, .home-button  {
         font-size: 2.1rem;
@@ -299,8 +305,14 @@ body {
     .insert-text::before,
     .current-page::before,
     .project__title-span::before {
-        height: 1.8rem;
+        height: 1.5rem;
         bottom: 48%;
+    }
+}
+
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    .top-nav, .opening-word, .home-button  {
+        font-size: 2.8rem;
     }
 }
 
@@ -310,21 +322,47 @@ body {
     }
 }
 
+@media screen and (max-width: 64rem) and (orientation: portrait) {
+    .top-nav, .opening-word, .home-button  {
+        font-size: 2.6rem;
+    }
+}
+
+@media screen and (max-width: 59rem) {
+    .top-nav, .opening-word, .home-button  {
+        font-size: 1.7rem;
+    }
+    .insert-text::before,
+    .current-page::before,
+    .project__title-span::before {
+        height: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 59rem) and (orientation: portrait) {
+    .top-nav, .opening-word, .home-button  {
+        font-size: 2.4rem;
+    }
+}
+
 @media screen and (max-width: 53rem) {
     .home-button {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
     .top-nav {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         margin: 3rem 5vw 2rem 5vw;
     }
     .opening-word {
         margin: 4rem 0 0 0;
-        padding: 2rem 5vw;
-        font-size: 1.6rem;
+        padding: 2rem 9vw;
+        font-size: 1.5rem;
+    }
+    .animate-border {
+        border-right: 4px solid white;
     }
     .insert-text::before, .current-page::before, .project__title-span::before {
-        height: 61%;
+        height: 1.2rem;
         bottom: 45%;
     }
     .current-page::before {
@@ -336,19 +374,19 @@ body {
 
 @media screen and (max-width: 53rem) and (orientation: portrait) {
     .home-button {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
     .top-nav {
         margin: 5rem 9vw 3rem 9vw;
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
     .top-nav__link {
-        padding-left: 2rem;
+        padding-left: 1.9rem;
     }
     .opening-word {
         margin: 5rem 9vw 3rem 9vw;
         padding: 0;
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
     .insert-text::before,
     .current-page::before,
@@ -369,19 +407,13 @@ body {
         padding-left: 1rem;
     }
     .animate-border {
-        padding-right: 0;
-        border-right: 4px solid white;
+        padding-right: 0.4rem;
     }
     .opening-word {
         margin: 5rem 0 0 0;
-        padding: 2rem 6vw;
+        padding: 2rem 8vw;
         font-size: 1.4rem;
     }
-    /* .insert-text::before, .current-page::before, .project__title-span::before {
-        height: 1.5rem;
-        left: 0.6rem;
-        bottom: 1.1rem;
-    } */
     .current-page::before {
         right: -0.5rem;
         bottom: 0.7rem;
@@ -390,10 +422,10 @@ body {
 
 @media screen and (max-width: 44rem) and (orientation: portrait){
     .top-nav, .home-button {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
     }
     .opening-word {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
     }
 }
 
@@ -434,6 +466,7 @@ body {
 
 @media screen and (max-width: 24rem){
     .opening-word {
+        margin: 3rem 0 0 0;
         font-size: 1.2rem;
     }
     .top-nav {
@@ -446,8 +479,5 @@ body {
 @media screen and (max-width: 21rem){
     .home {
         justify-content: flex-start;
-    }
-    .opening-word {
-        margin: 5rem 0 1rem 0;
     }
 }
