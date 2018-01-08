@@ -447,7 +447,7 @@ body {
         font-size: 1.3rem;
     }
     .opening-word {
-        margin: 2rem 0 0 0;
+        margin: -2rem 0 0 0;
         padding: 0 1.4rem;
         font-size: 1.3rem;
         line-height: 1.7;
