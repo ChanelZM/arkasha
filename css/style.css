@@ -466,7 +466,7 @@ body {
 
 @media screen and (max-width: 24rem){
     .opening-word {
-        margin: 3rem 0 0 0;
+        margin: 1.5rem 0 0 0;
         font-size: 1.2rem;
     }
     .top-nav {
