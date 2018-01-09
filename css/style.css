@@ -934,9 +934,6 @@ body {
     .project__img-left {
         left: 4rem;
     }
-    .project__img-left, .project__img-right {
-        width: 24vw;
-    }
     .project__title-span:first-of-type {
         margin-bottom: 1.3rem;
     }
@@ -955,5 +952,8 @@ body {
     .slider-handlers__arrow {
         height: 1.8rem;
         width: 1.8rem;
+    }
+    .project__img-left, .project__img-right {
+        width: 24vw;
     }
 }
