@@ -21,6 +21,7 @@
             homeTypingText[i].innerHTML = words[homeTypingText[i].id][0];
 
             if("ontouchstart" in document.documentElement == false){
+                homeTypingText[i].addEventListener('focus', checkIfStillAnimating);
                 homeTypingText[i].addEventListener('mouseover', checkIfStillAnimating);
             } else {
                 homeTypingText[i].addEventListener('click', checkIfStillAnimating);
