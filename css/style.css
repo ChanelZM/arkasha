@@ -331,6 +331,12 @@ body {
     margin-top: 1.5rem;
 }
 
+@media screen and (orientation: portrait){
+    .project__img-left, .project__img-right {
+        width: 30vw;
+    }
+}
+
 @media screen and (max-width: 93rem) {
     .home-button {
         font-size: 2.5rem;
@@ -364,18 +370,43 @@ body {
         margin-bottom: 4rem;
     }
     .current-page::before {
-       height: 80%;
-   }
-   .slider-handlers__arrow {
-       height: 5rem;
-       width: 5rem;
-   }
-   .project__img-left {
-       left: 12rem;
-   }
-   .project__img-right {
-       right: 8rem;
-   }
+        height: 80%;
+    }
+    .slider-handlers__arrow {
+        height: 5rem;
+        width: 5rem;
+    }
+    .project__img-left {
+        left: 12rem;
+    }
+    .project__img-right {
+        right: 8rem;
+    }
+}
+
+@media screen and (max-width: 93rem) and (orientation: portrait){
+    .project__title {
+        width: 55rem;
+        font-size: 6.5em;
+    }
+    .project__loc {
+        font-size: 1.8rem;
+    }
+    .project__client {
+        margin-top: 1rem;
+        font-size: 3rem;
+    }
+    .project__title-span:first-of-type::after {
+        left: -6vw;
+    }
+    .project__title-span::before {
+        height: 5.5rem;
+        bottom: 2.5rem;
+    }
+    .slider-handlers__arrow {
+        height: 7rem;
+        width: 7rem;
+    }
 }
 
 @media screen and (max-width: 78rem) {
@@ -433,6 +464,28 @@ body {
     .home-button  {
         font-size: 2.8rem;
     }
+    .project__title {
+        width: 50rem;
+        font-size: 5.5em;
+    }
+    .project__title-span:first-of-type::after {
+        left: -5vw;
+    }
+    .project__title-span::before {
+        height: 5rem;
+        bottom: 2rem;
+    }
+    .project__loc {
+        font-size: 1.8rem;
+    }
+    .project__client {
+        margin-top: 1rem;
+        font-size: 3rem;
+    }
+    .slider-handlers__arrow {
+        height: 6rem;
+        width: 6rem;
+    }
 }
 
 @media screen and (max-width: 70rem) {
@@ -457,6 +510,16 @@ body {
     .opening-word,
     .home-button  {
         font-size: 2.8rem;
+    }
+    .project__title {
+        width: 44rem;
+        font-size: 5em;
+    }
+    .project__loc {
+        font-size: 1.6rem;
+    }
+    .project__client {
+        font-size: 2.4rem;
     }
 }
 
@@ -484,6 +547,20 @@ body {
     .opening-word,
     .home-button  {
         font-size: 2.6rem;
+    }
+    .project__title {
+        width: 41rem;
+        font-size: 4.8em;
+    }
+    .slider-handlers__arrow {
+        height: 5rem;
+        width: 5rem;
+    }
+    .project__loc {
+        font-size: 1.5rem;
+    }
+    .project__client {
+        font-size: 2.2rem;
     }
 }
 
@@ -519,6 +596,7 @@ body {
    .project__img-right {
        right: 4rem;
    }
+
 }
 
 @media screen and (max-width: 59rem) and (orientation: portrait) {
@@ -526,6 +604,23 @@ body {
     .opening-word,
     .home-button  {
         font-size: 2.4rem;
+    }
+    .project__img-left, .project__img-right {
+        width: 28vw;
+    }
+    .project__title {
+        width: 39rem;
+        font-size: 4.6em;
+    }
+    .slider-handlers__arrow {
+        height: 4.3rem;
+        width: 4.3rem;
+    }
+    .project__loc {
+        font-size: 1.3rem;
+    }
+    .project__client {
+        font-size: 2rem;
     }
 }
 
@@ -594,6 +689,16 @@ body {
     .current-page::before,
     .project__title-span::before {
         left: 0.8rem;
+    }
+    .slider-handlers__arrow {
+        height: 3.7rem;
+        width: 3.7rem;
+    }
+    .project__loc {
+        font-size: 1.1rem;
+    }
+    .project__client {
+        font-size: 1.8rem;
     }
 }
 
@@ -671,6 +776,23 @@ body {
     .opening-word {
         font-size: 1.7rem;
     }
+    .project__img-left, .project__img-right {
+        width: 30vw;
+    }
+    .project__title {
+        width: 28rem;
+        font-size: 3.3em;
+    }
+    .project__loc {
+        font-size: 1rem;
+    }
+    .project__client {
+        font-size: 1.6rem;
+    }
+    .project__img-left {
+        left: 7rem;
+        top: 3rem;
+    }
 }
 @media screen and (max-width: 37rem) {
     .project__title {
@@ -699,6 +821,37 @@ body {
     }
     .opening-word {
         font-size: 1.4rem;
+    }
+    .slider-handlers__arrow {
+        height: 3rem;
+        width: 3rem;
+    }
+    .project__title {
+        width: 25rem;
+        font-size: 3em;
+    }
+    .project__client {
+        font-size: 1.6rem;
+    }
+    .project__img-left {
+        left: 6rem;
+    }
+}
+
+@media screen and (max-width: 33rem) and (orientation: portrait){
+    .project__title {
+        width: 22rem;
+        font-size: 2.6em;
+    }
+    .slider-handlers__arrow {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .project__title-span:first-of-type {
+        margin-bottom: 1.5rem;
+    }
+    .project__title-span::before {
+        bottom: 1rem;
     }
 }
 
@@ -736,6 +889,27 @@ body {
     }
 }
 
+@media screen and (max-width: 28rem) and (orientation: portrait){
+    .project__title {
+        width: 20rem;
+        font-size: 2.2em;
+    }
+    .slider-handlers__arrow {
+        height: 2.2rem;
+        width: 2.2rem;
+    }
+    .project__loc {
+        font-size: 0.9rem;
+    }
+    .project__client {
+        font-size: 1.4rem;
+    }
+    .project__title-span::before {
+        height: 83%;
+        bottom: 0.8rem;
+    }
+}
+
 @media screen and (max-width: 24rem){
     .opening-word {
         font-size: 1.2rem;
@@ -747,7 +921,39 @@ body {
         font-size: 1.2rem;
     }
 }
+
+@media screen and (max-width: 24rem) and (orientation: portrait){
+    .project__title {
+        width: 15rem;
+        font-size: 1.9em;
+    }
+    .slider-handlers__arrow {
+        height: 2rem;
+        width: 2rem;
+    }
+    .project__img-left {
+        left: 4rem;
+    }
+    .project__img-left, .project__img-right {
+        width: 24vw;
+    }
+    .project__title-span:first-of-type {
+        margin-bottom: 1.3rem;
+    }
+}
 @media screen and (max-width: 21rem){
     .opening-word {
         margin: 5rem 0 0 0;
+    }
+    .project__title {
+        width: 14rem;
+        font-size: 1.7em;
+    }
+    .project__loc {
+        font-size: 0.8rem;
+    }
+    .slider-handlers__arrow {
+        height: 1.8rem;
+        width: 1.8rem;
+    }
 }
