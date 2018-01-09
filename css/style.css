@@ -1,20 +1,70 @@
 /*#FEDBDC
 #FDD430
 #FB0D1B
-font-family: 'Didot', serif
-font-family: 'Prestige Elite Std', serif*/
+*/
+@-webkit-font-face {
+    font-family: 'Larish Neue';
+    src: url('../fonts/larish_neue_semibold.otf');
+}
+@-moz-font-face {
+    font-family: 'Larish Neue';
+    src: url('../fonts/larish_neue_semibold.otf');
+}
+@-ms-font-face {
+    font-family: 'Larish Neue';
+    src: url('../fonts/larish_neue_semibold.otf');
+}
 @font-face {
     font-family: 'Larish Neue';
     src: url('../fonts/larish_neue_semibold.otf');
+}
+@-webkit-font-face {
+    font-family: 'Larish Neue';
+    src: url('../fonts/larish_neue_italic.otf');
+    font-style: italic;
+}
+@-moz-font-face {
+    font-family: 'Larish Neue';
+    src: url('../fonts/larish_neue_italic.otf');
+    font-style: italic;
+}
+@-ms-font-face {
+    font-family: 'Larish Neue';
+    src: url('../fonts/larish_neue_italic.otf');
+    font-style: italic;
 }
 @font-face {
     font-family: 'Larish Neue';
     src: url('../fonts/larish_neue_italic.otf');
     font-style: italic;
 }
+@-webkit-font-face {
+    font-family: 'Larish Alte';
+    src: url('../fonts/larish_alte_semibold-webfont.otf');
+}
+@-moz-font-face {
+    font-family: 'Larish Alte';
+    src: url('../fonts/larish_alte_semibold-webfont.otf');
+}
+@-ms-font-face {
+    font-family: 'Larish Alte';
+    src: url('../fonts/larish_alte_semibold-webfont.otf');
+}
 @font-face {
     font-family: 'Larish Alte';
     src: url('../fonts/larish_alte_semibold-webfont.otf');
+}
+@-webkit-keyframes blinkBorder{
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
+@-moz-keyframes blinkBorder{
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
+@-ms-keyframes blinkBorder{
+    from, to { border-color: transparent }
+    50% { border-color: white; }
 }
 @keyframes blinkBorder{
     from, to { border-color: transparent }
@@ -78,8 +128,17 @@ body {
     font-size: 2.8rem;
     z-index: 1;
 }
-.top-nav__link {
+.top-nav__item {
+    position: relative;
     padding-left: 3rem;
+}
+.top-nav__link::before {
+    position: absolute;
+    left: -0.5rem;
+    right: -0.5rem;
+    bottom: -0.5rem;
+    top: -0.5rem;
+    content: '';
 }
 .home-button {
     margin: 0;
@@ -87,8 +146,9 @@ body {
     font-weight: normal;
 }
  .current-page::before {
-     right: -1rem;
-     bottom: 1.5rem;
+    height: 80%;
+    right: -1rem;
+    bottom: 1.5rem;
  }
 
 /* HOME */
@@ -280,6 +340,9 @@ body {
         right: -0.3rem;
         bottom: 50%;
     }
+    .current-page::before {
+       height: 80%;
+   }
 }
 
 @media screen and (max-width: 78rem) {
@@ -308,6 +371,9 @@ body {
         height: 1.5rem;
         bottom: 48%;
     }
+    .current-page::before {
+       height: 82%;
+   }
 }
 
 @media screen and (max-width: 70rem) and (orientation: portrait) {
@@ -337,6 +403,8 @@ body {
     .project__title-span::before {
         height: 1.3rem;
     }
+    .current-page::before {
+       height: 88%;
 }
 
 @media screen and (max-width: 59rem) and (orientation: portrait) {
@@ -366,7 +434,7 @@ body {
         bottom: 45%;
     }
     .current-page::before {
-        height: 88%;
+        height: 90%;
         right: -0.6rem;
         bottom: 50%;
     }
@@ -380,7 +448,7 @@ body {
         margin: 5rem 9vw 3rem 9vw;
         font-size: 1.9rem;
     }
-    .top-nav__link {
+    .top-nav__item {
         padding-left: 1.9rem;
     }
     .opening-word {
@@ -403,7 +471,7 @@ body {
     .home-button {
         font-size: 1.4rem;
     }
-    .top-nav__link {
+    .top-nav__item {
         padding-left: 1rem;
     }
     .animate-border {
@@ -439,6 +507,9 @@ body {
 }
 
 @media screen and (max-width: 27rem){
+    .home {
+        justify-content: flex-start;
+    }
     .top-nav {
         margin: 2rem 1.4rem 2rem 1.4rem;
         font-size: 1.3rem;
@@ -447,7 +518,7 @@ body {
         font-size: 1.3rem;
     }
     .opening-word {
-        margin: 0;
+        margin: 7rem 0 1rem 0;
         padding: 0 1.4rem;
         font-size: 1.3rem;
         line-height: 1.7;
@@ -461,6 +532,7 @@ body {
         right: -0.2rem;
     }
     .current-page::before {
+        height: 93%;
         right: -0.5rem;
         bottom: 0.6rem;
     }
@@ -468,7 +540,6 @@ body {
 
 @media screen and (max-width: 24rem){
     .opening-word {
-        margin: -2rem 0 0 0;
         font-size: 1.2rem;
     }
     .top-nav {
@@ -479,9 +550,6 @@ body {
     }
 }
 @media screen and (max-width: 21rem){
-    .home {
-        justify-content: flex-start;
-    }
     .opening-word {
         margin: 5rem 0 0 0;
 }
