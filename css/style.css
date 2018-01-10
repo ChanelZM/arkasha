@@ -945,6 +945,7 @@ body {
     .slider-handlers__arrow {
         height: 2.2rem;
         width: 2.2rem;
+        bottom: 7.6rem;
     }
     .project__loc {
         font-size: 0.9rem;
@@ -978,6 +979,7 @@ body {
     .slider-handlers__arrow {
         height: 2rem;
         width: 2rem;
+        bottom: 7rem;
     }
     .project__img-left {
         left: 4rem;
