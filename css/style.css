@@ -440,7 +440,7 @@ body {
         right: -6vw;
     }
     .project__client-wrap {
-        bottom: 2rem;
+        bottom: 4rem;
     }
     .project__client {
         font-size: 2rem;
@@ -790,11 +790,15 @@ body {
         font-size: 1rem;
     }
     .project__client {
+        margin-top: 0.4rem;
         font-size: 1.6rem;
     }
     .project__img-left {
         left: 7rem;
         top: 3rem;
+    }
+    .project__client-wrap {
+        bottom: 5rem;
     }
 }
 @media screen and (max-width: 37rem) {
