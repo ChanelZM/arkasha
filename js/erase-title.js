@@ -18,6 +18,8 @@
             j;
 
         document.querySelector('.projects').classList.add('projects-js');
+        document.querySelector('#prev-arrow').removeAttribute('hidden');
+        document.querySelector('#next-arrow').removeAttribute('hidden');
 
         //Save all the project info in an array
         for(i = 0; i < projects.length; i++){
