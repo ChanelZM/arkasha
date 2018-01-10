@@ -764,7 +764,7 @@ body {
         font-size: 1.4rem;
     }
     .project__client-wrap {
-        bottom: 0.5rem;
+        bottom: 2.5rem;
     }
     .project__img-right {
         bottom: 5rem;
@@ -842,6 +842,11 @@ body {
     }
     .project__img-left {
         left: 6rem;
+    }
+}
+@media screen and (max-width: 33rem) {
+    .projects, .project__images {
+        height: 90vh;
     }
 }
 
