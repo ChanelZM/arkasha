@@ -845,7 +845,7 @@ body {
     }
 }
 @media screen and (max-width: 33rem) {
-    .projects, .project__images {
+    .project, .project__images {
         height: 90vh;
     }
 }
