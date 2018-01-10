@@ -5,7 +5,7 @@
     var words = {},
         num = 0,
         isAnimating = false,
-        speed = 90;
+        speed = 50;
 
     var prevWord,
         nextWord,

@@ -850,8 +850,14 @@ body {
     .project__images {
         height: 90vh;
     }
+    .project__img-left {
+        top: 5rem;
+    }
+    .project__img-right {
+        bottom: 3rem;
+    }
     .project__client-wrap {
-        bottom: 2rem;
+        bottom: 1.3rem;
     }
 }
 
@@ -869,6 +875,9 @@ body {
     }
     .project__title-span::before {
         bottom: 1rem;
+    }
+    .project__client-wrap {
+        bottom: 2rem;
     }
 }
 
@@ -971,6 +980,6 @@ body {
         width: 1.8rem;
     }
     .project__img-left, .project__img-right {
-        width: 24vw;
+        width: 28vw;
     }
 }
