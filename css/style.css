@@ -845,8 +845,13 @@ body {
     }
 }
 @media screen and (max-width: 33rem) {
-    .project, .projects, .project__images {
+    .project,
+    .projects,
+    .project__images {
         height: 90vh;
+    }
+    .project__client-wrap {
+        bottom: 2rem;
     }
 }
 
