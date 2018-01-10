@@ -285,11 +285,10 @@ body {
     height: 6rem;
     width: 6rem;
     position: fixed;
-    top: 50%;
+    bottom: 5vw;
     background-color: #FB0D1B;
     color: white;
     border: none;
-    transform: translateY(-50%);
 }
 .slider-handlers__arrow:hover {
     background-color: #FDD430;
@@ -375,6 +374,7 @@ body {
     .slider-handlers__arrow {
         height: 5rem;
         width: 5rem;
+        bottom: 5.7rem;
     }
     .project__img-left {
         left: 12rem;
@@ -386,8 +386,8 @@ body {
 
 @media screen and (max-width: 93rem) and (orientation: portrait){
     .project__title {
-        width: 55rem;
-        font-size: 6.5em;
+        width: 61rem;
+        font-size: 7.2em;
     }
     .project__loc {
         font-size: 1.8rem;
@@ -420,10 +420,11 @@ body {
     .slider-handlers__arrow {
         height: 4.3rem;
         width: 4.3rem;
+        bottom: 5.5rem;
     }
     .project__title {
-        width: 47rem;
-        font-size: 4.8em;
+        width: 60rem;
+        font-size: 6em;
     }
     .project__title-span::before {
         height: 4.3rem;
@@ -437,7 +438,7 @@ body {
         left: -6vw;
     }
     .project__title-span:last-of-type::after {
-        right: -6vw;
+        right: -8vw;
     }
     .project__client-wrap {
         bottom: 4rem;
@@ -465,8 +466,8 @@ body {
         font-size: 2.8rem;
     }
     .project__title {
-        width: 50rem;
-        font-size: 5.5em;
+        width: 55rem;
+        font-size: 6.2em;
     }
     .project__title-span:first-of-type::after {
         left: -5vw;
@@ -506,6 +507,12 @@ body {
     .project__title-span::before {
        height: 82%;
    }
+   .project__client-wrap {
+       bottom: 3rem;
+   }
+   .slider-handlers__arrow {
+       bottom: 4.5rem;
+   }
 }
 
 @media screen and (max-width: 70rem) and (orientation: portrait) {
@@ -515,8 +522,8 @@ body {
         font-size: 2.8rem;
     }
     .project__title {
-        width: 44rem;
-        font-size: 5em;
+        width: 50rem;
+        font-size: 5.8em;
     }
     .project__loc {
         font-size: 1.6rem;
@@ -539,9 +546,13 @@ body {
     .slider-handlers__arrow {
         height: 3.8rem;
         width: 3.8rem;
+        bottom: 4.3rem;
+    }
+    .project__loc {
+        font-size: 1.1rem;
     }
     .project__client {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -552,8 +563,8 @@ body {
         font-size: 2.6rem;
     }
     .project__title {
-        width: 41rem;
-        font-size: 4.8em;
+        width: 45rem;
+        font-size: 5.1em;
     }
     .slider-handlers__arrow {
         height: 5rem;
@@ -582,8 +593,8 @@ body {
        height: 88%;
    }
    .project__title {
-        width: 37rem;
-        font-size: 4.2em;
+       width: 44rem;
+       font-size: 5em;
     }
    .project__title-span::before {
        height: 70%;
@@ -592,6 +603,10 @@ body {
    .project__title-span:first-of-type::after,
    .project__title-span:last-of-type::after {
        top: -2rem;
+   }
+   .project__img-left,
+   .project__img-right {
+       width: 30vh;
    }
    .project__img-left {
        left: 8rem;
@@ -612,8 +627,8 @@ body {
         width: 28vw;
     }
     .project__title {
-        width: 39rem;
-        font-size: 4.6em;
+        width: 42rem;
+        font-size: 4.8em;
     }
     .slider-handlers__arrow {
         height: 4.3rem;
@@ -649,14 +664,14 @@ body {
         bottom: 45%;
     }
     .project__title {
-        width: 33rem;
-        font-size: 3.7em;
+        width: 35rem;
+        font-size: 4.2em;
     }
     .project__title-span::before {
         height: 62%;
     }
     .project__title-span:first-of-type {
-        margin-bottom: 2rem;
+        margin-bottom: 1.2rem;
     }
     .project__title-span:first-of-type::after {
         left: -5vw;
@@ -729,8 +744,8 @@ body {
         bottom: 0.7rem;
     }
     .project__title {
-        width: 27rem;
-        font-size: 3em;
+        width: 29rem;
+        font-size: 3.3em;
     }
     .project__title-span::before {
         height: 78%;
@@ -748,6 +763,9 @@ body {
     .slider-handlers__arrow {
         height: 2.9rem;
         width: 2.9rem;
+    }
+    .slider-handlers__arrow {
+        bottom: 3.5rem;
     }
     .slider-handlers__arrow::after {
         position: absolute;
@@ -783,8 +801,8 @@ body {
         width: 32vw;
     }
     .project__title {
-        width: 28rem;
-        font-size: 3.3em;
+        width: 29rem;
+        font-size: 3.6em;
     }
     .project__loc {
         font-size: 1rem;
@@ -803,8 +821,8 @@ body {
 }
 @media screen and (max-width: 37rem) {
     .project__title {
-        width: 22rem;
-        font-size: 2.5em;
+        width: 26rem;
+        font-size: 2.7em;
     }
     .slider-handlers__arrow {
         height: 2.2rem;
@@ -834,14 +852,14 @@ body {
         width: 3rem;
     }
     .project__title {
-        width: 25rem;
+        width: 26rem;
         font-size: 3em;
     }
     .project__client {
         font-size: 1.6rem;
     }
     .project__img-left {
-        left: 6rem;
+        left: 5rem;
     }
 }
 @media screen and (max-width: 33rem) {
@@ -859,16 +877,20 @@ body {
     .project__client-wrap {
         bottom: 1.3rem;
     }
+    .slider-handlers__arrow {
+        bottom: 4.5rem;
+    }
 }
 
 @media screen and (max-width: 33rem) and (orientation: portrait){
     .project__title {
-        width: 22rem;
-        font-size: 2.6em;
+        width: 23rem;
+        font-size: 2.8em;
     }
     .slider-handlers__arrow {
         height: 2.5rem;
         width: 2.5rem;
+        bottom: 6rem;
     }
     .project__title-span:first-of-type {
         margin-bottom: 1.5rem;
@@ -918,7 +940,7 @@ body {
 @media screen and (max-width: 28rem) and (orientation: portrait){
     .project__title {
         width: 20rem;
-        font-size: 2.2em;
+        font-size: 2.3em;
     }
     .slider-handlers__arrow {
         height: 2.2rem;
@@ -928,7 +950,7 @@ body {
         font-size: 0.9rem;
     }
     .project__client {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     .project__title-span::before {
         height: 83%;
@@ -950,8 +972,8 @@ body {
 
 @media screen and (max-width: 24rem) and (orientation: portrait){
     .project__title {
-        width: 15rem;
-        font-size: 1.9em;
+        width: 19rem;
+        font-size: 2.1em;
     }
     .slider-handlers__arrow {
         height: 2rem;
@@ -969,8 +991,8 @@ body {
         margin: 5rem 0 0 0;
     }
     .project__title {
-        width: 14rem;
-        font-size: 1.7em;
+        width: 17rem;
+        font-size: 2em;
     }
     .project__loc {
         font-size: 0.8rem;
@@ -978,6 +1000,7 @@ body {
     .slider-handlers__arrow {
         height: 1.8rem;
         width: 1.8rem;
+        bottom: 4.2rem;
     }
     .project__img-left, .project__img-right {
         width: 28vw;
