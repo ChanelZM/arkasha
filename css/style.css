@@ -486,6 +486,9 @@ body {
         height: 6rem;
         width: 6rem;
     }
+    .project__client-wrap {
+        bottom: 2rem;
+    }
 }
 
 @media screen and (max-width: 70rem) {
@@ -777,7 +780,7 @@ body {
         font-size: 1.7rem;
     }
     .project__img-left, .project__img-right {
-        width: 30vw;
+        width: 32vw;
     }
     .project__title {
         width: 28rem;
