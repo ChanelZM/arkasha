@@ -71,6 +71,7 @@
     50% { border-color: white; }
 }
 body {
+    position: relative;
     margin: 0;
     padding: 0;
     color: #FB0D1B;
@@ -816,7 +817,7 @@ body {
         top: 3rem;
     }
     .project__client-wrap {
-        bottom: 5rem;
+        bottom: 6rem;
     }
 }
 @media screen and (max-width: 37rem) {
@@ -890,7 +891,7 @@ body {
     .slider-handlers__arrow {
         height: 2.5rem;
         width: 2.5rem;
-        bottom: 2.5rem;
+        bottom: 3rem;
     }
     .project__title-span:first-of-type {
         margin-bottom: 1.5rem;
@@ -945,7 +946,7 @@ body {
     .slider-handlers__arrow {
         height: 2.2rem;
         width: 2.2rem;
-        bottom: 7.6rem;
+        bottom: 3rem;
     }
     .project__loc {
         font-size: 0.9rem;
@@ -979,7 +980,7 @@ body {
     .slider-handlers__arrow {
         height: 2rem;
         width: 2rem;
-        bottom: 7rem;
+        bottom: 3rem;
     }
     .project__img-left {
         left: 4rem;
@@ -1010,6 +1011,6 @@ body {
 }
 @media screen and (max-width: 21rem) and (orientation: portrait){
     .slider-handlers__arrow {
-        bottom: 6rem;
+        bottom: 3rem;
     }
 }
