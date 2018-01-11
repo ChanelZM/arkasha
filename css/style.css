@@ -1,6 +1,8 @@
-/*#FEDBDC
-#FDD430
-#FB0D1B
+/*
+#f6e1cc BG
+#642a42 Text
+#e9b54c Highlights
+#75b777 Images
 */
 @-webkit-font-face {
     font-family: 'Larish Neue';
@@ -74,9 +76,9 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
-    color: #FB0D1B;
+    color: #642a42;
     font-family: 'Larish Neue', serif;
-    background-color: #FEDBDC;
+    background-color: #f6e1cc;
     cursor: default;
     cursor: url('../img/default-mouse.png'), default;
 }
@@ -103,7 +105,7 @@ body {
 .basic-link,
 .basic-link:visited {
     position: relative;
-    color: #FB0D1B;
+    color: #642a42;
     text-decoration: none;
 }
 .basic-link:focus,
@@ -113,7 +115,7 @@ body {
     outline-color: white;
 }
 .basic-link:hover {
-    border-bottom: 1px solid #FB0D1B;
+    border-bottom: 1px solid #642a42;
 }
 .basic-link:hover, .project__client:hover {
     cursor: pointer;
@@ -134,7 +136,7 @@ body {
     right: 0;
     bottom: 32px;
     bottom: 2rem;
-    background-color: #FDD430;
+    background-color: #e9b54c;
     content: '';
     z-index: -1;
 }
@@ -261,7 +263,7 @@ body {
     left: 50%;
     top: 50%;
     margin: 0;
-    width: 62rem;
+    width: 67rem;
     font-size: 8em;
     font-weight: normal;
     text-align: center;
@@ -272,7 +274,7 @@ body {
     transform: translate(-50%, -50%);
 }
 .project__link:hover {
-    border-bottom: 2px solid #FB0D1B;
+    border-bottom: 2px solid #642a42;
     cursor: pointer;
     cursor: url('../img/pointer.png'), pointer;
 }
@@ -314,13 +316,13 @@ body {
 }
 .project__client {
     margin-top: 0.5rem;
-    color: #FB0D1B;
+    color: #642a42;
     font-size: 2.3rem;
     text-decoration: underline;
     display: block;
 }
 .project__client:visited {
-    color: #FB0D1B;
+    color: #642a42;
 }
 .slider-handlers__arrow {
     -webkit-appearance: none;
