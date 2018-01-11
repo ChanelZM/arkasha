@@ -3,21 +3,9 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 22.1 37.5" style="enable-background:new 0 0 22.1 37.5;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:url(#SVGID_1_);}
-	.st1{fill:url(#SVGID_2_);}
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#75B777;}
 </style>
-<g>
-	
-		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-131.5872" y1="363.1078" x2="-116.2637" y2="363.1078" gradientTransform="matrix(1 0 0 -1 135.1721 383.4237)">
-		<stop  offset="0" style="stop-color:#FDD430;stop-opacity:0.5"/>
-		<stop  offset="1" style="stop-color:#FDD430"/>
-	</linearGradient>
-	<path class="st0" d="M7.8,20.3l11.1,9.3v5L3.6,21.7v-2.8L18.9,6v5.1L7.8,20.3z"/>
-	
-		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="3.5871" y1="17.0725" x2="18.9062" y2="17.0725" gradientTransform="matrix(-1 0 0 1 22.4932 0)">
-		<stop  offset="0" style="stop-color:#E42528"/>
-		<stop  offset="1" style="stop-color:#E42528"/>
-	</linearGradient>
-	<path class="st1" d="M18.9,26.3v5.1L3.6,18.5v-2.8L18.9,2.8v5L7.8,17L18.9,26.3z"/>
-</g>
+<path class="st0" d="M7,20.7l12.6,10.6v5.7L2.3,22.3v-3.2L19.6,4.5v5.8L7,20.7z"/>
+<path class="st1" d="M19.6,27.5v5.8L2.3,18.5v-3.2L19.6,0.7v5.7L7,16.9L19.6,27.5z"/>
 </svg>

@@ -4,20 +4,17 @@
 	 viewBox="0 0 32.7 37.5" style="enable-background:new 0 0 32.7 37.5;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:url(#SVGID_1_);}
-	.st1{fill:url(#SVGID_2_);}
+	.st1{fill:#FFFFFF;}
 </style>
 <g>
-	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.2539" y1="20.2903" x2="21.8406" y2="20.2903">
-		<stop  offset="0" style="stop-color:#FDD430;stop-opacity:0.5"/>
-		<stop  offset="1" style="stop-color:#FDD430"/>
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.2653" y1="18.8886" x2="21.852" y2="18.8886" gradientTransform="matrix(1 0 0 -1 0 40)">
+		<stop  offset="0" style="stop-color:#75B777;stop-opacity:0.5"/>
+		<stop  offset="1" style="stop-color:#75B777"/>
 	</linearGradient>
-	<polygon class="st0" points="21.8,8.6 21.8,5.2 7.3,5.2 7.3,8.6 12.9,8.6 12.9,32 7.3,32 7.3,35.4 21.8,35.4 21.8,32 16.3,32 
-		16.3,8.6 	"/>
-	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="10.4131" y1="17.2097" x2="24.9998" y2="17.2097">
-		<stop  offset="0" style="stop-color:#E42528"/>
-		<stop  offset="1" style="stop-color:#E42528"/>
-	</linearGradient>
-	<polygon class="st1" points="25,5.5 25,2.1 10.5,2.1 10.5,5.5 16,5.5 16,28.9 10.4,28.9 10.4,32.3 24.9,32.3 24.9,28.9 19.5,28.9 
-		19.5,5.5 	"/>
+	<polygon class="st0" points="21.8,9.4 21.8,6 7.3,6 7.3,9.4 12.9,9.4 12.9,32.8 7.3,32.8 7.3,36.2 21.8,36.2 21.8,32.8 16.3,32.8 
+		16.3,9.4 	"/>
+	<polygon class="st1" points="26,5.3 26,1.9 11.5,1.9 11.5,5.3 17,5.3 17,28.7 11.4,28.7 11.4,32.1 25.9,32.1 25.9,28.7 20.5,28.7 
+		20.5,5.3 	"/>
 </g>
 </svg>

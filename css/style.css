@@ -91,6 +91,10 @@ body {
     position: relative;
     min-height: 100vh;
 }
+.contactpage {
+    min-height: 100vh;
+    min-width: 100vw;
+}
 [hidden], .hidden {
     display: none !important;
 }
@@ -356,7 +360,7 @@ body {
 .contact-wrap {
     position: fixed;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     top: 0;
 }
 .contact {
