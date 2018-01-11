@@ -4,17 +4,20 @@
 	 viewBox="0 0 32.7 37.5" style="enable-background:new 0 0 32.7 37.5;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:url(#SVGID_1_);}
-	.st1{fill:#FDD430;}
+	.st1{fill:#FFFFFF;}
 </style>
 <g>
 	<g>
-		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="3.1017" y1="22.961" x2="28.4435" y2="22.961">
-			<stop  offset="0" style="stop-color:#E42528;stop-opacity:0.5"/>
-			<stop  offset="1" style="stop-color:#E42528"/>
-		</linearGradient>
-		<polygon class="st0" points="3.1,10.4 11,35.5 28.4,19.7 		"/>
 		<g>
-			<polygon class="st1" points="5.4,1.7 13.3,26.8 30.7,11 			"/>
+			
+				<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="3.2" y1="16.95" x2="28.5418" y2="16.95" gradientTransform="matrix(1 0 0 -1 0 40)">
+				<stop  offset="0" style="stop-color:#75B777;stop-opacity:0.5"/>
+				<stop  offset="1" style="stop-color:#75B777"/>
+			</linearGradient>
+			<polygon class="st0" points="3.2,10.5 11.1,35.6 28.5,19.7 			"/>
+		</g>
+		<g>
+			<polygon class="st1" points="5.5,1.8 13.4,26.9 30.8,11 			"/>
 		</g>
 	</g>
 </g>
