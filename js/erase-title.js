@@ -160,5 +160,7 @@
         }, (firstTimeoutTime + secondTimeoutTime));
     }
 
-    init();
+    if(document.addEventListener){
+        init();
+    }
 })();
