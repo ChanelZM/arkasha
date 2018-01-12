@@ -165,12 +165,12 @@ body {
 .top-nav__menu {
     padding-right: 48px;
     padding-right: 0rem;
-    font-size: 45px;
-    font-size: inherit;
     float: right;
 }
 .top-nav__item {
     position: relative;
+    font-size: 45px;
+    font-size: 2.8rem;
     padding-left: 48px;
     padding-left: 3rem;
 }
@@ -199,10 +199,11 @@ body {
 
 /* HOME */
 .opening-word {
-    position: absolute;
-    margin: 112px 16px 0 15px;
-    margin: 7rem 0 0 0;
-    max-width: 560px;
+    position: relative;
+    margin-top: 112px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1140px;
     padding: 2rem 13vw;
     top: 50%;
     font-size: 45px;
@@ -214,8 +215,10 @@ body {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-@supports (max-width: 35rem){
+@supports (transform: translateY(-50%)){
     .opening-word {
+        position: absolute;
+        margin: 7rem 0 0 0;
         max-width: none;
     }
 }
