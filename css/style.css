@@ -365,6 +365,7 @@ body {
 }
 .contact {
     position: absolute;
+    margin-top: 3rem;
     left: 50%;
     top: 50%;
     width: 39rem;
@@ -387,6 +388,10 @@ body {
 }
 .contact__data {
     margin-top: 1.5rem;
+}
+
+#email-photo, #phone-photo {
+    transition: 1s opacity ease;
 }
 
 @media screen and (orientation: portrait){
