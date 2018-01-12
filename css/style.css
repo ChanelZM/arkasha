@@ -132,9 +132,6 @@ nav, main {
     cursor: text;
     cursor: url('../img/text.png'), text;
 }
-.current-page {
-    background-color: #e9b54c;
-}
 .insert-text:before,
 .current-page:before,
 .project__title-span:before{
