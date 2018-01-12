@@ -14,6 +14,8 @@
     function init(){
         var i;
 
+        document.querySelector('.insert-text').classList.add('animate-border');
+
         for(i = 0; i < homeTypingText.length; i++){
             splitToArray(homeTypingText[i], homeTypingText[i].id);
 

@@ -282,10 +282,13 @@ nav, main {
 .project__img-left,
 .project__img-right {
     position: absolute;
+    width: 240px;
     width: 32vh;
 }
 .project__img-left {
+    top: 112px;
     top: 7rem;
+    left: 256px;
     left: 16rem;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -293,7 +296,9 @@ nav, main {
     transform: rotate(90deg);
 }
 .project__img-right {
+    bottom: 112px;
     bottom: 7rem;
+    right: 160px;
     right: 10rem;
 }
 .project__title {
