@@ -132,7 +132,7 @@ nav, main {
     cursor: text;
     cursor: url('../img/text.png'), text;
 }
-.insert-text:before,
+.insert-text::before,
 .current-page:before,
 .project__title-span:before{
     position: absolute;
