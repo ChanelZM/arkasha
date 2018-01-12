@@ -6,7 +6,9 @@
         phoneNumber = document.querySelector('#number'),
         email = document.querySelector('#email'),
         emailPhoto = document.querySelector('#email-photo'),
-        phonePhoto = document.querySelector('#phone-photo');
+        phonePhoto = document.querySelector('#phone-photo'),
+        emailSound = document.querySelector('.email-sound'),
+        phoneSound = document.querySelector('.phone-sound');
 
     var timeoutImg,
         i;
@@ -14,19 +16,21 @@
     if("ontouchstart" in document.documentElement == false){
         for(i = 0; i < projects.length; i++){
             opacityImg(projectImages, '0');
-            addHoverEventListeners(projects[i].querySelector('.project__link'), projectImages);
+            addImgHoverEventListeners(projects[i].querySelector('.project__link'), projectImages);
         }
         if(phoneNumber){
             opacityImg(phonePhoto, '0');
-            addHoverEventListeners(phoneNumber, phonePhoto);
+            addImgHoverEventListeners(phoneNumber, phonePhoto);
+            playSound(phoneNumber, phoneSound);
         }
         if(email){
             opacityImg(emailPhoto, '0');
-            addHoverEventListeners(email, emailPhoto);
+            addImgHoverEventListeners(email, emailPhoto);
+            playSound(email, emailSound);
         }
     }
 
-    function addHoverEventListeners(elem, img){
+    function addImgHoverEventListeners(elem, img){
         elem.addEventListener('mouseover', function(){
             opacityImg(img, '1');
         });
@@ -43,5 +47,13 @@
 
     function opacityImg(img, opac){
         img.style.opacity = opac;
+    }
+
+    function playSound(elem, sound){
+        console.log(sound);
+        elem.addEventListener('mouseover', function(){
+            sound.autoplay = true;
+            sound.load();
+        })
     }
 })();
