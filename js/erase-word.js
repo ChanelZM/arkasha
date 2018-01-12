@@ -21,11 +21,20 @@
             homeTypingText[i].innerHTML = words[homeTypingText[i].id][0];
 
             if("ontouchstart" in document.documentElement == false){
-                homeTypingText[i].addEventListener('focus', checkIfStillAnimating);
-                homeTypingText[i].addEventListener('mouseover', checkIfStillAnimating);
+                addEvent(homeTypingText[i], 'focus', checkIfStillAnimating);
+                addEvent(homeTypingText[i], 'mouseover', checkIfStillAnimating);
             } else {
-                homeTypingText[i].addEventListener('click', checkIfStillAnimating);
+                addEvent(homeTypingText[i], 'click', checkIfStillAnimating);
             }
+        }
+    }
+
+    //Internet Explorer uses attachEvent
+    function addEvent(elem, ev, func){
+        if(!document.addEventListener){
+            elem.attachEvent(ev, func);
+        } else {
+            elem.addEventListener(ev, func);
         }
     }
 
