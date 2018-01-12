@@ -82,6 +82,9 @@
         isAnimating = true;
         projectParent = document.querySelector('.project');
 
+        document.querySelector('.ticking-sound').autoplay = true;
+        document.querySelector('.ticking-sound').load();
+
         var spans = projectParent.querySelectorAll('.project__title-span'),
             firstTimeoutTime = (spans[1].innerHTML.length + 1) * speed,
             secondTimeoutTime = (spans[0].innerHTML.length + 1) * speed;

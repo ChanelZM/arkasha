@@ -48,6 +48,9 @@
         isAnimating = true;
         num = prevWord.length;
 
+        document.querySelector('.ticking-sound').autoplay = true;
+        document.querySelector('.ticking-sound').load();
+
         loopThroughLetters(e.target, 'subtract', prevWord, 0, id);
     }
 
@@ -56,7 +59,6 @@
         type == 'add' ? num++ : num--;
 
         elem.innerHTML = word.substring (0, num);
-
         //This function will be called over and over until the word is written or totally erased
         setTimeout(function(){
             if(type == 'add' && num < max){

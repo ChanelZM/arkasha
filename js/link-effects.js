@@ -50,10 +50,11 @@
     }
 
     function playSound(elem, sound){
-        console.log(sound);
-        elem.addEventListener('mouseover', function(){
-            sound.autoplay = true;
-            sound.load();
-        })
+        if("ontouchstart" in document.documentElement == false){
+            elem.addEventListener('mouseover', function(){
+                sound.autoplay = true;
+                sound.load();
+            });
+        }
     }
 })();
