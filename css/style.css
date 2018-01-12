@@ -201,7 +201,9 @@ nav, main {
 }
  .current-page:before {
     height: 80%;
+    right: -16px;
     right: -1rem;
+    bottom: 16px;
     bottom: 1rem;
  }
 
@@ -435,14 +437,18 @@ nav, main {
 
 @media screen and (max-width: 93rem) {
     .home-button {
+        font-size: 30px;
         font-size: 2.3rem;
     }
     .top-nav {
+        margin: 80px 32px 80px 32px;
         margin: 5rem 5vw 3rem 5vw;
+        font-size: 30px;
         font-size: 2.3rem;
     }
     .opening-word {
         padding: 2rem 12vw;
+        font-size: 30px;
         font-size: 2.3rem;
     }
     .animate-border {
@@ -450,15 +456,20 @@ nav, main {
     }
     .insert-text:before,
     .current-page:before {
+        height: 30px;
         height: 1.9rem;
+        right: -5px;
         right: -0.3rem;
         bottom: 50%;
     }
     .project__title {
+        width: 880px;
         width: 55rem;
+        font-size: 96px;
         font-size: 6em;
     }
     .project__title-span:before {
+        height: 80px;
         height: 5rem;
         bottom: 2rem;
     }
@@ -514,10 +525,12 @@ nav, main {
 
 @media screen and (max-width: 78rem) {
     .home-button, .top-nav {
+        font-size: 30px;
         font-size: 2.3rem;
     }
     .opening-word {
         padding: 2rem 11vw;
+        font-size: 30px;
         font-size: 2.3rem;
     }
     .slider-handlers__arrow {
@@ -566,6 +579,7 @@ nav, main {
 @media screen and (max-width: 78rem) and (orientation: portrait) {
     .top-nav, .opening-word,
     .home-button  {
+        font-size: 48px;
         font-size: 2.8rem;
     }
     .project__title {
@@ -599,6 +613,7 @@ nav, main {
     .top-nav,
     .opening-word,
     .home-button  {
+        font-size: 34px;
         font-size: 2.1rem;
     }
     .insert-text:before,
@@ -622,6 +637,7 @@ nav, main {
     .top-nav,
     .opening-word,
     .home-button  {
+        font-size: 45px;
         font-size: 2.8rem;
     }
     .project__title {
@@ -640,6 +656,7 @@ nav, main {
     .top-nav,
     .opening-word,
     .home-button  {
+        font-size: 30px;
         font-size: 1.9rem;
     }
     .project-title {
@@ -663,6 +680,7 @@ nav, main {
     .top-nav,
     .opening-word,
     .home-button  {
+        font-size: 42px;
         font-size: 2.6rem;
     }
     .project__title {
@@ -685,6 +703,7 @@ nav, main {
     .top-nav,
     .opening-word,
     .home-button  {
+        font-size: 27px;
         font-size: 1.7rem;
     }
     .insert-text:before,
@@ -724,6 +743,7 @@ nav, main {
     .top-nav,
     .opening-word,
     .home-button  {
+        font-size: 38px;
         font-size: 2.4rem;
     }
     .project__img-left, .project__img-right {
@@ -747,9 +767,11 @@ nav, main {
 
 @media screen and (max-width: 53rem) {
     .home-button {
+        font-size: 24px;
         font-size: 1.5rem;
     }
     .top-nav {
+        font-size: 24px;
         font-size: 1.5rem;
         margin: 3rem 5vw 2rem 5vw;
     }
@@ -781,6 +803,7 @@ nav, main {
     }
     .current-page:before {
         height: 90%;
+        right: -9px;
         right: -0.6rem;
         bottom: 50%;
     }
@@ -792,10 +815,12 @@ nav, main {
 
 @media screen and (max-width: 53rem) and (orientation: portrait) {
     .home-button {
+        font-size: 30px;
         font-size: 1.9rem;
     }
     .top-nav {
         margin: 5rem 9vw 3rem 9vw;
+        font-size: 30px;
         font-size: 1.9rem;
     }
     .top-nav__item {
@@ -809,6 +834,7 @@ nav, main {
     .insert-text:before,
     .current-page:before,
     .project__title-span:before {
+        left: 13px;
         left: 0.8rem;
     }
     .slider-handlers__arrow {
@@ -816,19 +842,23 @@ nav, main {
         width: 3.7rem;
     }
     .project__loc {
+        font-size: 18px;
         font-size: 1.1rem;
     }
     .project__client {
+        font-size: 18px;
         font-size: 1.8rem;
     }
 }
 
 @media screen and (max-width: 44rem) {
     .top-nav {
+        font-size: 22px;
         font-size: 1.4rem;
         margin: 2rem 5vw 3rem 5vw;
     }
     .home-button {
+        font-size: 22px;
         font-size: 1.4rem;
     }
     .top-nav__item {
@@ -840,6 +870,7 @@ nav, main {
     .opening-word {
         margin: 5rem 0 0 0;
         padding: 2rem 8vw;
+        font-size: 27px;
         font-size: 1.7rem;
     }
     .current-page:before {
@@ -862,12 +893,11 @@ nav, main {
     }
     .project__img-right {
         right: 3rem;
+        bottom: 5rem;
     }
     .slider-handlers__arrow {
         height: 2.9rem;
         width: 2.9rem;
-    }
-    .slider-handlers__arrow {
         bottom: 3.5rem;
     }
     .slider-handlers__arrow:after {
@@ -887,13 +917,11 @@ nav, main {
     .project__client-wrap {
         bottom: 2.5rem;
     }
-    .project__img-right {
-        bottom: 5rem;
-    }
     .contact {
         width: 22rem;
     }
-    .contact__name, .contact__data {
+    .contact__name,
+    .contact__data {
         font-size: 2rem;
     }
 }
@@ -901,12 +929,15 @@ nav, main {
 @media screen and (max-width: 44rem) and (orientation: portrait){
     .top-nav,
     .home-button {
+        font-size: 27px;
         font-size: 1.7rem;
     }
     .opening-word {
+        font-size: 27px;
         font-size: 1.7rem;
     }
-    .project__img-left, .project__img-right {
+    .project__img-left,
+    .project__img-right {
         width: 32vw;
     }
     .project__title {
@@ -951,9 +982,11 @@ nav, main {
 @media screen and (max-width: 37rem) and (orientation: portrait){
     .top-nav,
     .home-button {
+        font-size: 22px;
         font-size: 1.4rem;
     }
     .opening-word {
+        font-size: 22px;
         font-size: 1.4rem;
     }
     .slider-handlers__arrow {
@@ -992,7 +1025,8 @@ nav, main {
     .contact {
         width: 67%;
     }
-    .contact__name, .contact__data {
+    .contact__name,
+    .contact__data {
         font-size: 1.5rem;
     }
 }
@@ -1024,14 +1058,17 @@ nav, main {
     }
     .top-nav {
         margin: 2rem 1.4rem 2rem 1.4rem;
+        font-size: 20px;
         font-size: 1.3rem;
     }
     .home-button {
+        font-size: 20px;
         font-size: 1.3rem;
     }
     .opening-word {
         margin: 7rem 0 1rem 0;
         padding: 0 1.4rem;
+        font-size: 20px;
         font-size: 1.3rem;
         line-height: 1.7;
     }
@@ -1079,9 +1116,11 @@ nav, main {
         font-size: 1.2rem;
     }
     .top-nav {
+        font-size: 19px;
         font-size: 1.2rem;
     }
     .home-button {
+        font-size: 19px;
         font-size: 1.2rem;
     }
 }
