@@ -163,6 +163,10 @@ body {
     z-index: 1;
 }
 .top-nav__menu {
+    padding-right: 48px;
+    padding-right: 0rem;
+    font-size: 45px;
+    font-size: inherit;
     float: right;
 }
 .top-nav__item {
@@ -196,10 +200,12 @@ body {
 /* HOME */
 .opening-word {
     position: absolute;
-    margin: 112px 48px 0 48px;
+    margin: 112px 16px 0 15px;
     margin: 7rem 0 0 0;
+    max-width: 560px;
     padding: 2rem 13vw;
     top: 50%;
+    font-size: 45px;
     font-size: 2.8rem;
     font-weight: normal;
     line-height: 1.6;
@@ -207,6 +213,11 @@ body {
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+@supports (max-width: 35rem){
+    .opening-word {
+        max-width: none;
+    }
 }
 @supports(justify-content: center){
     .home {
