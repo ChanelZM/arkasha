@@ -105,9 +105,9 @@
         }, (speed * word.length));
     }
 
-    //Sorry internet explorer >=8
-    if(document.addEventListener){
+    // //Sorry internet explorer >=8
+    // if(document.addEventListener){
         init();
-    }
+    // }
 
 })();

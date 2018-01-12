@@ -160,7 +160,7 @@
         }, (firstTimeoutTime + secondTimeoutTime));
     }
 
-    if(document.addEventListener){
+    // if(document.addEventListener){
         init();
-    }
+    // }
 })();
