@@ -48,10 +48,16 @@
         isAnimating = true;
         num = prevWord.length;
 
-        document.querySelector('.ticking-sound').autoplay = true;
-        document.querySelector('.ticking-sound').load();
+        //Play sound
+        document.querySelector('.ticking-sound').play();
+        document.querySelector('.ticking-sound').addEventListener('ended', loopSound);
 
         loopThroughLetters(e.target, 'subtract', prevWord, 0, id);
+    }
+
+    function loopSound(){
+        this.currentTime = 0;
+        this.play();
     }
 
     function loopThroughLetters(elem, type, word, max, id){
@@ -91,6 +97,8 @@
         //After the animation, another animation can start again
         setTimeout(function(){
             isAnimating = false;
+            document.querySelector('.ticking-sound').removeEventListener('ended', loopSound);
+            document.querySelector('.ticking-sound').pause();
             elem.classList.remove('animate-border');
         }, (speed * word.length));
     }

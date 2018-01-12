@@ -82,8 +82,9 @@
         isAnimating = true;
         projectParent = document.querySelector('.project');
 
-        document.querySelector('.ticking-sound').autoplay = true;
-        document.querySelector('.ticking-sound').load();
+        //Play sound
+        document.querySelector('.ticking-sound').play();
+        document.querySelector('.ticking-sound').addEventListener('ended', loopSound);
 
         var spans = projectParent.querySelectorAll('.project__title-span'),
             firstTimeoutTime = (spans[1].innerHTML.length + 1) * speed,
@@ -105,6 +106,11 @@
         setTimeout(function(){
             typeWord(spans);
         }, (firstTimeoutTime + secondTimeoutTime));
+    }
+
+    function loopSound(){
+        this.currentTime = 0;
+        this.play();
     }
 
     function loopThroughLetters(elem, type, word, max){
@@ -147,6 +153,8 @@
         }, firstTimeoutTime);
 
         setTimeout(function(){
+            document.querySelector('.ticking-sound').removeEventListener('ended', loopSound);
+            document.querySelector('.ticking-sound').pause();
             elements[1].classList.remove('animate-border');
             isAnimating = false;
         }, (firstTimeoutTime + secondTimeoutTime));
