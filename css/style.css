@@ -132,9 +132,12 @@ nav, main {
     cursor: text;
     cursor: url('../img/text.png'), text;
 }
-.insert-text::before,
-.current-page::before,
-.project__title-span::before{
+.current-page {
+    background-color: #e9b54c;
+}
+.insert-text:before,
+.current-page:before,
+.project__title-span:before{
     position: absolute;
     height: 40px;
     height: 2.5rem;
@@ -166,6 +169,8 @@ nav, main {
     z-index: 1;
 }
 .top-nav__menu {
+    margin: -48px 112px 0 0;
+    margin: 0rem;
     padding-right: 48px;
     padding-right: 0rem;
     float: right;
@@ -178,7 +183,7 @@ nav, main {
     padding-left: 3rem;
 }
 @supports(content: ''){
-    .top-nav__link::after {
+    .top-nav__link:after {
         position: absolute;
         left: -8px;
         left: -0.5rem;
@@ -189,14 +194,15 @@ nav, main {
     }
 }
 .home-button {
-    margin: 0;
+    margin: 48px 0 0 112px;
+    margin: 0rem;
     font-size: 45px;
     font-size: 2.8rem;
     max-width: 240px;
     max-width: 30rem;
     font-weight: normal;
 }
- .current-page::before {
+ .current-page:before {
     height: 80%;
     right: -1rem;
     bottom: 1rem;
@@ -315,7 +321,7 @@ nav, main {
     position: relative;
     display: inline-block;
 }
-.project__title-span::before {
+.project__title-span:before {
     height: 7rem;
     bottom: 3rem;
     right: -2rem;
@@ -323,14 +329,14 @@ nav, main {
 .project__title-span:first-of-type {
     margin-bottom: 5rem;
 }
-.project__title-span:first-of-type::after {
+.project__title-span:first-of-type:after {
     position: absolute;
     top: -4rem;
     left: -8vw;
     content: '“';
     font-family: 'Larish Alte', serif;
 }
-.project__title-span:last-of-type::after {
+.project__title-span:last-of-type:after {
     position: absolute;
     top: -4rem;
     right: -9vw;
@@ -445,8 +451,8 @@ nav, main {
     .animate-border {
         padding-right: 0.7rem;
     }
-    .insert-text::before,
-    .current-page::before {
+    .insert-text:before,
+    .current-page:before {
         height: 1.9rem;
         right: -0.3rem;
         bottom: 50%;
@@ -455,14 +461,14 @@ nav, main {
         width: 55rem;
         font-size: 6em;
     }
-    .project__title-span::before {
+    .project__title-span:before {
         height: 5rem;
         bottom: 2rem;
     }
     .project__title-span:first-of-type {
         margin-bottom: 4rem;
     }
-    .current-page::before {
+    .current-page:before {
         height: 80%;
     }
     .slider-handlers__arrow {
@@ -496,10 +502,10 @@ nav, main {
         margin-top: 1rem;
         font-size: 3rem;
     }
-    .project__title-span:first-of-type::after {
+    .project__title-span:first-of-type:after {
         left: -6vw;
     }
-    .project__title-span::before {
+    .project__title-span:before {
         height: 5.5rem;
         bottom: 2.5rem;
     }
@@ -526,7 +532,7 @@ nav, main {
         width: 60rem;
         font-size: 6em;
     }
-    .project__title-span::before {
+    .project__title-span:before {
         height: 4.3rem;
         bottom: 1.7rem;
         right: -1rem;
@@ -534,10 +540,10 @@ nav, main {
     .project__title-span:first-of-type {
         margin-bottom: 3rem;
     }
-    .project__title-span:first-of-type::after {
+    .project__title-span:first-of-type:after {
         left: -6vw;
     }
-    .project__title-span:last-of-type::after {
+    .project__title-span:last-of-type:after {
         right: -8vw;
     }
     .project__client-wrap {
@@ -569,10 +575,10 @@ nav, main {
         width: 55rem;
         font-size: 6.2em;
     }
-    .project__title-span:first-of-type::after {
+    .project__title-span:first-of-type:after {
         left: -5vw;
     }
-    .project__title-span::before {
+    .project__title-span:before {
         height: 5rem;
         bottom: 2rem;
     }
@@ -598,13 +604,13 @@ nav, main {
     .home-button  {
         font-size: 2.1rem;
     }
-    .insert-text::before,
-    .current-page::before {
+    .insert-text:before,
+    .current-page:before {
         height: 1.5rem;
         bottom: 48%;
     }
-    .current-page::before,
-    .project__title-span::before {
+    .current-page:before,
+    .project__title-span:before {
        height: 82%;
    }
    .project__client-wrap {
@@ -684,24 +690,24 @@ nav, main {
     .home-button  {
         font-size: 1.7rem;
     }
-    .insert-text::before,
-    .current-page::before,
-    .project__title-span::before {
+    .insert-text:before,
+    .current-page:before,
+    .project__title-span:before {
         height: 1.3rem;
     }
-    .current-page::before {
+    .current-page:before {
        height: 88%;
    }
    .project__title {
        width: 44rem;
        font-size: 5em;
     }
-   .project__title-span::before {
+   .project__title-span:before {
        height: 70%;
        bottom: 1.4rem;
    }
-   .project__title-span:first-of-type::after,
-   .project__title-span:last-of-type::after {
+   .project__title-span:first-of-type:after,
+   .project__title-span:last-of-type:after {
        top: -2rem;
    }
    .project__img-left,
@@ -758,8 +764,8 @@ nav, main {
     .animate-border {
         border-right: 4px solid white;
     }
-    .insert-text::before,
-    .current-page::before {
+    .insert-text:before,
+    .current-page:before {
         height: 1.2rem;
         bottom: 45%;
     }
@@ -767,16 +773,16 @@ nav, main {
         width: 35rem;
         font-size: 4.2em;
     }
-    .project__title-span::before {
+    .project__title-span:before {
         height: 62%;
     }
     .project__title-span:first-of-type {
         margin-bottom: 1.2rem;
     }
-    .project__title-span:first-of-type::after {
+    .project__title-span:first-of-type:after {
         left: -5vw;
     }
-    .current-page::before {
+    .current-page:before {
         height: 90%;
         right: -0.6rem;
         bottom: 50%;
@@ -803,9 +809,9 @@ nav, main {
         padding: 0;
         font-size: 1.9rem;
     }
-    .insert-text::before,
-    .current-page::before,
-    .project__title-span::before {
+    .insert-text:before,
+    .current-page:before,
+    .project__title-span:before {
         left: 0.8rem;
     }
     .slider-handlers__arrow {
@@ -839,7 +845,7 @@ nav, main {
         padding: 2rem 8vw;
         font-size: 1.7rem;
     }
-    .current-page::before {
+    .current-page:before {
         right: -0.5rem;
         bottom: 0.7rem;
     }
@@ -847,11 +853,11 @@ nav, main {
         width: 29rem;
         font-size: 3.3em;
     }
-    .project__title-span::before {
+    .project__title-span:before {
         height: 78%;
         bottom: 1.1rem;
     }
-    .project__title-span:first-of-type::after, .project__title-span:last-of-type::after {
+    .project__title-span:first-of-type:after, .project__title-span:last-of-type:after {
         top: -1.5rem;
     }
     .project__img-left {
@@ -867,7 +873,7 @@ nav, main {
     .slider-handlers__arrow {
         bottom: 3.5rem;
     }
-    .slider-handlers__arrow::after {
+    .slider-handlers__arrow:after {
         position: absolute;
         left: -1rem;
         top: -1rem;
@@ -1007,7 +1013,7 @@ nav, main {
     .project__title-span:first-of-type {
         margin-bottom: 1.5rem;
     }
-    .project__title-span::before {
+    .project__title-span:before {
         bottom: 1rem;
     }
     .project__client-wrap {
@@ -1035,14 +1041,14 @@ nav, main {
     .animate-border {
         border-right: 3px solid white;
     }
-    .insert-text::before,
-    .current-page::before,
-    .project__title-span::before {
+    .insert-text:before,
+    .current-page:before,
+    .project__title-span:before {
         height: 61%;
         bottom: 41%;
         right: -0.2rem;
     }
-    .current-page::before {
+    .current-page:before {
         height: 93%;
         right: -0.5rem;
         bottom: 0.6rem;
@@ -1065,7 +1071,7 @@ nav, main {
     .project__client {
         font-size: 1.2rem;
     }
-    .project__title-span::before {
+    .project__title-span:before {
         height: 83%;
         bottom: 0.8rem;
     }
