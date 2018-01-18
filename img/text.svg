@@ -3,15 +3,10 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 32.7 37.5" style="enable-background:new 0 0 32.7 37.5;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:url(#SVGID_1_);}
-	.st1{fill:#FFFFFF;}
+	.st0{fill:#642741;}
+	.st1{fill:#E7B44C;}
 </style>
 <g>
-	
-		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="7.2653" y1="18.8886" x2="21.852" y2="18.8886" gradientTransform="matrix(1 0 0 -1 0 40)">
-		<stop  offset="0" style="stop-color:#75B777;stop-opacity:0.5"/>
-		<stop  offset="1" style="stop-color:#75B777"/>
-	</linearGradient>
 	<polygon class="st0" points="21.8,9.4 21.8,6 7.3,6 7.3,9.4 12.9,9.4 12.9,32.8 7.3,32.8 7.3,36.2 21.8,36.2 21.8,32.8 16.3,32.8 
 		16.3,9.4 	"/>
 	<polygon class="st1" points="26,5.3 26,1.9 11.5,1.9 11.5,5.3 17,5.3 17,28.7 11.4,28.7 11.4,32.1 25.9,32.1 25.9,28.7 20.5,28.7 

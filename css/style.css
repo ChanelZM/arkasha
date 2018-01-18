@@ -179,6 +179,47 @@ nav, main {
     padding-left: 48px;
     padding-left: 3rem;
 }
+.social-media {
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+}
+.social-media__list {
+    display: flex;
+    justify-content: space-between;
+    width: 8rem;
+}
+.social-media__icons {
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    font-size: 0;
+}
+.social-media__icons:hover {
+    border: none;
+}
+#icon-facebook {
+    background-image: url('../img/icon-facebook.svg');
+    background-size: cover;
+}
+#icon-twitter {
+    background-image: url('../img/icon-twitter.svg');
+    background-size: cover;
+}
+#icon-instagram {
+    background-image: url('../img/icon-insta.svg');
+    background-size: cover;
+}
+#icon-facebook:hover {
+    background-image: url('../img/icon-facebook-yel.svg');
+}
+#icon-twitter:hover {
+    background-image: url('../img/icon-twitter-yel.svg');
+}
+#icon-instagram:hover {
+    background-image: url('../img/icon-insta-yel.svg');
+}
 @supports(content: ''){
     .top-nav__link:after {
         position: absolute;
