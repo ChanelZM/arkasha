@@ -5,7 +5,10 @@
     var words = {},
         num = 0,
         isAnimating = false,
-        speed = 50;
+        speed = {
+            typing: 50,
+            erasing: 25
+        };
 
     var prevWord,
         nextWord,
@@ -65,8 +68,10 @@
     }
 
     function loopThroughLetters(elem, type, word, max, id){
+        var writeSpeed;
         //If the goal is to add a word, add one letter everytime, otherwise remove one letter
         type == 'add' ? num++ : num--;
+        type == 'add' ? writeSpeed = speed.typing : writeSpeed = speed.erasing;
 
         elem.innerHTML = word.substring (0, num);
         //This function will be called over and over until the word is written or totally erased
@@ -79,7 +84,7 @@
                 var newWord = comparePrevAndNextWord(elem, word, id);
                 typeWord(elem, newWord, id);
             }
-        }, speed);
+        }, writeSpeed);
     }
 
     //Get a new word to be written in the html
@@ -105,7 +110,7 @@
             document.querySelector('.ticking-sound').removeEventListener('ended', loopSound);
             document.querySelector('.ticking-sound').pause();
             elem.classList.remove('animate-border');
-        }, (speed * word.length));
+        }, (speed.typing * word.length));
     }
 
     //Sorry internet explorer >=8
