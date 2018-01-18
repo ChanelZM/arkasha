@@ -9,7 +9,8 @@
 
     var prevWord,
         nextWord,
-        randNum;
+        randNum,
+        eventInfo;
 
     function init(){
         var i;
@@ -41,6 +42,7 @@
         if(isAnimating == false){
             e.target.classList.add('animate-border');
             prevWord = e.target.innerHTML;
+            eventInfo = e;
             eraseWord(e, e.target.innerHTML, e.target.id);
         }
     }
@@ -74,19 +76,21 @@
             } else if(type == 'subtract' && num > max){
                 loopThroughLetters(elem, type, word, max, id);
             } else if(type == 'subtract' && num == max){
-                comparePrevAndNextWord(elem, id);
+                var newWord = comparePrevAndNextWord(elem, word, id);
+                typeWord(elem, newWord, id);
             }
         }, speed);
     }
 
     //Get a new word to be written in the html
-    function comparePrevAndNextWord(elem, id){
+    function comparePrevAndNextWord(elem, compareWord, id){
         randNum = Math.floor(Math.random() * words[id].length);
 
-        if(words[id][randNum] != prevWord){
-            typeWord(elem, words[id][randNum], id);
-        } else {
-            comparePrevAndNextWord(elem, id);
+        if(words[id][randNum] == compareWord) {
+            comparePrevAndNextWord(elem, compareWord, id);
+        }
+        if(words[id][randNum] != compareWord){
+            return words[id][randNum];
         }
     }
 
@@ -95,7 +99,6 @@
         elem.style.minWidth = '0px';
 
         loopThroughLetters(elem, 'add', word, word.length, id);
-
         //After the animation, another animation can start again
         setTimeout(function(){
             isAnimating = false;
