@@ -5,6 +5,7 @@
     var words = {},
         num = 0,
         isAnimating = false,
+        isHovering = {},
         speed = 50;
 
     var prevWord,
@@ -18,7 +19,8 @@
         document.querySelector('.insert-text').classList.add('animate-border');
 
         for(i = 0; i < homeTypingText.length; i++){
-            splitToArray(homeTypingText[i], homeTypingText[i].id);
+            words[homeTypingText[i].id] = splitToArray(homeTypingText[i], homeTypingText[i].id);
+            isHovering[homeTypingText[i].id] = false;
 
             //Refill HTML with only a single word
             homeTypingText[i].innerHTML = words[homeTypingText[i].id][0];
@@ -26,6 +28,12 @@
             if("ontouchstart" in document.documentElement == false){
                 homeTypingText[i].addEventListener('focus', checkIfStillAnimating);
                 homeTypingText[i].addEventListener('mouseover', checkIfStillAnimating);
+                homeTypingText[i].addEventListener('mouseenter', function(e){
+                    isHovering[e.target.id] = true;
+                });
+                homeTypingText[i].addEventListener('mouseleave', function(e){
+                    isHovering[e.target.id] = false;
+                });
             } else {
                 homeTypingText[i].addEventListener('click', checkIfStillAnimating);
             }
@@ -34,7 +42,7 @@
 
     //Get every word out of the html and make an array of it
     function splitToArray(el, id){
-        words[id] = el.innerHTML.split('/');
+        return el.innerHTML.split('/');
     }
 
     //The animation can't be triggered again during an animation
@@ -68,6 +76,8 @@
         //If the goal is to add a word, add one letter everytime, otherwise remove one letter
         type == 'add' ? num++ : num--;
 
+        console.log(isHovering);
+
         elem.innerHTML = word.substring (0, num);
         //This function will be called over and over until the word is written or totally erased
         setTimeout(function(){
@@ -78,6 +88,11 @@
             } else if(type == 'subtract' && num == max){
                 var newWord = comparePrevAndNextWord(elem, word, id);
                 typeWord(elem, newWord, id);
+            } else if(type == 'add' && num == max && isHovering[id] == true){
+                var newWord = comparePrevAndNextWord(elem, word, id);
+                setTimeout(function(){
+                    eraseWord(eventInfo, word, id);
+                }, 500);
             }
         }, speed);
     }
