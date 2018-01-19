@@ -42,9 +42,17 @@ verhaal./festivalticket./buitenlands project.</span> Doen.
             </li>
         </ul>
     </nav>
+    <div class="fake-loader">
+        <img src="img/signature.gif" />
+    </div>
     <audio class="ticking-sound">
         <source src="audio/ticking-sound.mp3" type="audio/mpeg" />
     </audio>
+    <script>
+        setTimeout(function(){
+            document.querySelector('.fake-loader').classList.add('hidden');
+        }, 5500);
+    </script>
     <script src="js/erase-word.js"></script>
 </body>
 </html>
