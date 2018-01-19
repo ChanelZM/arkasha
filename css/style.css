@@ -314,34 +314,66 @@ nav, main {
     height: 100vh;
     width: 100vw;
 }
-.project__images {
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    transition: 1s ease all;
-}
-.project__img-left,
-.project__img-right {
+.project__img {
     position: absolute;
-    width: 240px;
-    width: 32vh;
+    transition: 1s ease opacity;
 }
-.project__img-left {
-    top: 112px;
-    top: 7rem;
-    left: 256px;
-    left: 16rem;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
+[src="../img/alone.png"] {
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
-.project__img-right {
-    bottom: 112px;
-    bottom: 7rem;
-    right: 160px;
-    right: 10rem;
+[src="../img/colombia.png"] {
+    bottom: 0;
+    left: 0;
+    width: 60vw;
 }
+[src="../img/letter.png"] {
+    width: 32vw;
+    left: 10vw;
+    top: 50%;
+    transform: translateY(-50%);
+}
+[src="../img/prison.png"] {
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+[src="../img/goodshithappens.png"] {
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+[src="../img/bucket.png"] {
+    height: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+[src="../img/red.png"] {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+[src="../img/building.png"] {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+[src="../img/water.png"] {
+    bottom: 0;
+    left: 0;
+    width: 40vw;
+}
+[src="../img/scissors.png"] {
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .project__title {
     position: absolute;
     left: 50%;
@@ -474,10 +506,45 @@ nav, main {
 #email-photo, #phone-photo {
     transition: 1s opacity ease;
 }
-
 @media screen and (orientation: portrait){
-    .project__img-left, .project__img-right {
-        width: 30vw;
+    .social-media__list {
+        width: 13rem;
+    }
+    .social-media {
+        bottom: 3rem;
+    }
+    .social-media__icons {
+        height: 3rem;
+        width: 3rem;
+    }
+    .project__client-wrap {
+        bottom: 6rem;
+    }
+    [src="../img/colombia.png"] {
+        width: 83vw;
+    }
+    [src="../img/letter.png"] {
+        width: 56vw;
+        left: 5vw;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    [src="../img/goodshithappens.png"] {
+        height: 85%;
+    }
+    [src="../img/bucket.png"] {
+        height: auto;
+        width: 100%;
+    }
+    [src="../img/water.png"] {
+        width: 63vw;
+    }
+}
+
+@media screen and (orientation: landscape){
+    .slider-handlers__arrow {
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
 
@@ -529,12 +596,6 @@ nav, main {
         height: 5rem;
         width: 5rem;
         bottom: 5.7rem;
-    }
-    .project__img-left {
-        left: 12rem;
-    }
-    .project__img-right {
-        right: 8rem;
     }
     .contact {
         width: 43vw;
@@ -589,7 +650,7 @@ nav, main {
         font-size: 6em;
     }
     .project__title-span:before {
-        height: 4.3rem;
+        height: 5rem;
         bottom: 1.7rem;
         right: -1rem;
     }
@@ -608,17 +669,14 @@ nav, main {
     .project__client {
         font-size: 2rem;
     }
-    .project__img-left {
-        left: 9rem;
-    }
-    .project__img-right {
-        right: 6rem;
-    }
     #next-arrow {
         right: 4vw;
     }
     #prev-arrow {
         left: 4vw;
+    }
+    [src="../img/colombia.png"] {
+        width: 50vw;
     }
 }
 
@@ -650,9 +708,6 @@ nav, main {
         height: 6rem;
         width: 6rem;
     }
-    .project__client-wrap {
-        bottom: 2rem;
-    }
 }
 
 @media screen and (max-width: 70rem) {
@@ -677,6 +732,13 @@ nav, main {
    .slider-handlers__arrow {
        bottom: 4.5rem;
    }
+   .social-media__icons {
+       height: 1.8rem;
+       width: 1.8rem;
+   }
+   .social-media {
+       bottom: 1rem;
+   }
 }
 
 @media screen and (max-width: 70rem) and (orientation: portrait) {
@@ -695,6 +757,19 @@ nav, main {
     }
     .project__client {
         font-size: 2.4rem;
+    }
+    .project__client-wrap {
+        bottom: 5rem;
+    }
+    .social-media {
+        bottom: 2.5rem;
+    }
+    .social-media__icons {
+        height: 2.4rem;
+        width: 2.4rem;
+    }
+    .social-media__list {
+        width: 11rem;
     }
 }
 
@@ -772,17 +847,6 @@ nav, main {
    .project__title-span:last-of-type:after {
        top: -2rem;
    }
-   .project__img-left,
-   .project__img-right {
-       width: 30vh;
-   }
-   .project__img-left {
-       left: 8rem;
-   }
-   .project__img-right {
-       right: 4rem;
-   }
-
 }
 
 @media screen and (max-width: 59rem) and (orientation: portrait) {
@@ -791,9 +855,6 @@ nav, main {
     .home-button  {
         font-size: 38px;
         font-size: 2.4rem;
-    }
-    .project__img-left, .project__img-right {
-        width: 28vw;
     }
     .project__title {
         width: 42rem;
@@ -836,7 +897,7 @@ nav, main {
     }
     .project__title {
         width: 35rem;
-        font-size: 4.2em;
+        font-size: 3.6em;
     }
     .project__title-span:before {
         height: 62%;
@@ -934,13 +995,6 @@ nav, main {
     .project__title-span:first-of-type:after, .project__title-span:last-of-type:after {
         top: -1.5rem;
     }
-    .project__img-left {
-        left: 6rem;
-    }
-    .project__img-right {
-        right: 3rem;
-        bottom: 5rem;
-    }
     .slider-handlers__arrow {
         height: 2.9rem;
         width: 2.9rem;
@@ -982,10 +1036,6 @@ nav, main {
         font-size: 27px;
         font-size: 1.7rem;
     }
-    .project__img-left,
-    .project__img-right {
-        width: 32vw;
-    }
     .project__title {
         width: 29rem;
         font-size: 3.6em;
@@ -996,10 +1046,6 @@ nav, main {
     .project__client {
         margin-top: 0.4rem;
         font-size: 1.6rem;
-    }
-    .project__img-left {
-        left: 7rem;
-        top: 3rem;
     }
     .project__client-wrap {
         bottom: 6rem;
@@ -1016,12 +1062,6 @@ nav, main {
     }
     .project__client {
         font-size: 1.2rem;
-    }
-    .project__img-left {
-        left: 4rem;
-    }
-    .project__img-right {
-        right: 2rem;
     }
 }
 
@@ -1046,21 +1086,12 @@ nav, main {
     .project__client {
         font-size: 1.6rem;
     }
-    .project__img-left {
-        left: 5rem;
-    }
 }
 @media screen and (max-width: 33rem) {
     .project,
     .projects,
     .project__images {
         height: 90vh;
-    }
-    .project__img-left {
-        top: 5rem;
-    }
-    .project__img-right {
-        bottom: 3rem;
     }
     .project__client-wrap {
         bottom: 1.3rem;
@@ -1094,7 +1125,17 @@ nav, main {
         bottom: 1rem;
     }
     .project__client-wrap {
+        bottom: 4rem;
+    }
+    .social-media {
         bottom: 2rem;
+    }
+    .social-media__list {
+        width: 8rem;
+    }
+    .social-media__icons {
+        height: 1.8rem;
+        width: 1.8rem;
     }
 }
 
@@ -1181,9 +1222,6 @@ nav, main {
         width: 2rem;
         bottom: 3rem;
     }
-    .project__img-left {
-        left: 4rem;
-    }
     .project__title-span:first-of-type {
         margin-bottom: 1.3rem;
     }
@@ -1203,9 +1241,6 @@ nav, main {
         height: 1.8rem;
         width: 1.8rem;
         bottom: 4.2rem;
-    }
-    .project__img-left, .project__img-right {
-        width: 28vw;
     }
 }
 @media screen and (max-width: 21rem) and (orientation: portrait){

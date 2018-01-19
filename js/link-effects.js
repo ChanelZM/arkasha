@@ -1,7 +1,7 @@
 /*jslint browser: true, devel: true, eqeq: true, plusplus: true, sloppy: true, vars: true, white: true*/
 (function(){
     var projectWrap = document.querySelector('.projects'),
-        projectImages = document.querySelector('.project__images'),
+        projectImages = document.querySelector('.project__img'),
         projects = document.querySelectorAll('.project'),
         phoneNumber = document.querySelector('#number'),
         email = document.querySelector('#email'),

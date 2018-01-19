@@ -27,8 +27,7 @@
                 title: getTitle(projects[i]),
                 href: projects[i].querySelector('.project__link').getAttribute('href'),
                 client: projects[i].querySelector('.project__client').innerHTML,
-                img1: projects[i].querySelector('.project__img-left').getAttribute('src'),
-                img2: projects[i].querySelector('.project__img-right').getAttribute('src')
+                img1: projects[i].querySelector('.project__img').getAttribute('src'),
             });
         }
 
@@ -135,8 +134,7 @@
     function typeWord(elements){
         projectParent.querySelector('.project__link').setAttribute('href', projectsInfo[count].href);
         projectParent.querySelector('.project__client').innerHTML = projectsInfo[count].client;
-        projectParent.querySelector('.project__img-left').setAttribute('src', projectsInfo[count].img1);
-        projectParent.querySelector('.project__img-right').setAttribute('src', projectsInfo[count].img2);
+        projectParent.querySelector('.project__img').setAttribute('src', projectsInfo[count].img1);
 
         var firstTimeoutTime = (projectsInfo[count].title[0].length + 1) * speed,
             secondTimeoutTime = (projectsInfo[1].title[0].length + 1) * speed;
