@@ -445,9 +445,7 @@ nav, main {
 }
 .project__client {
     margin-top: 0.5rem;
-    color: #642a42;
-    font-size: 2.3rem;
-    text-decoration: underline;
+    height: 4.3rem;
     display: block;
 }
 .project__client:visited {
@@ -480,6 +478,12 @@ nav, main {
 #next-arrow {
     right: 5vw;
     background-image: url('../img/next-arrow.svg');
+}
+[src="../img/demorgen.png"]{
+    transform: scale(0.6);
+}
+[src="../img/knack.png"]{
+    transform: scale(0.5);
 }
 
 /* CONTACT */
