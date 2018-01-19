@@ -279,6 +279,7 @@ nav, main {
     }
     .opening-word {
         position: relative;
+        letter-spacing: 0.05rem;
         transform: none;
     }
 }
