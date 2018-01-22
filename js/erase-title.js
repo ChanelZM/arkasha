@@ -28,7 +28,7 @@
                 href: projects[i].querySelector('.project__link').getAttribute('href'),
                 clientSrc: projects[i].querySelector('.project__client').getAttribute('src'),
                 clientAlt: projects[i].querySelector('.project__client').getAttribute('alt'),
-                img1: projects[i].querySelector('.project__img').getAttribute('src'),
+                img1: projects[i].querySelector('.project__img').getAttribute('src')
             });
         }
 
@@ -51,7 +51,7 @@
 
         nextArrow.addEventListener('click', checkIfStillAnimating);
         prevArrow.addEventListener('click', checkIfStillAnimating);
-        prevArrow.style.display = 'none';
+        // prevArrow.style.display = 'none';
 
     }
 
@@ -65,14 +65,12 @@
             direction == 'next-arrow' ? count++ : count--;
 
             //Make sure that user cannot click further than the span of the projects
-            if(count == 0){
-                prevArrow.style.display = 'none';
-            } else if(count == (projects.length - 1)){
-                nextArrow.style.display = 'none';
-            } else {
-                nextArrow.style.display = 'inline-block';
-                prevArrow.style.display = 'inline-block';
+            if(count == -1){
+                count = projectsInfo.length - 1;
+            } else if (count == projectsInfo.length){
+                count = 0;
             }
+
             eraseProject(prevNum);
 
         }
