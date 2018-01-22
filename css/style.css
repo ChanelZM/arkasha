@@ -94,10 +94,6 @@ nav, main {
     position: relative;
     min-height: 100vh;
 }
-.contactpage {
-    min-height: 100vh;
-    min-width: 100vw;
-}
 [hidden], .hidden {
     display: none !important;
 }
@@ -485,11 +481,18 @@ nav, main {
 }
 
 /* CONTACT */
+.contactpage {
+    min-height: 90vh;
+    min-width: 100vw;
+}
 .contact-wrap {
     position: fixed;
     width: 100vw;
     height: 90vh;
     top: 0;
+}
+.contact-page-wrap {
+    position: relative;
 }
 .contact {
     position: absolute;
@@ -1169,8 +1172,12 @@ nav, main {
 @media screen and (max-width: 33rem) {
     .project,
     .projects,
-    .project__images {
+    .project__images,
+    .contact-page-wrap {
         height: 90vh;
+    }
+    .contact  {
+        margin-top: 0;
     }
     .project__client-wrap {
         bottom: 1.3rem;
@@ -1259,7 +1266,7 @@ nav, main {
     #email-photo,
     #phone-photo,
     #kash-photo {
-        width: 47vw;
+        width: 43vw;
     }
 }
 
