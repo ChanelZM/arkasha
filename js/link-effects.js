@@ -5,8 +5,10 @@
         projects = document.querySelectorAll('.project'),
         phoneNumber = document.querySelector('#number'),
         email = document.querySelector('#email'),
+        kashName = document.querySelector('.contact__name'),
         emailPhoto = document.querySelector('#email-photo'),
         phonePhoto = document.querySelector('#phone-photo'),
+        kashPhoto = document.querySelector('#kash-photo'),
         emailSound = document.querySelector('.email-sound'),
         phoneSound = document.querySelector('.phone-sound');
 
@@ -27,6 +29,10 @@
             opacityImg(emailPhoto, '0');
             addImgHoverEventListeners(email, emailPhoto);
             playSound(email, emailSound);
+        }
+        if(kashName){
+            opacityImg(kashPhoto, '0');
+            addImgHoverEventListeners(kashName, kashPhoto);
         }
     }
 

@@ -174,15 +174,13 @@ nav, main {
 }
 .top-nav__item {
     position: relative;
-    /* font-size: 45px;
-    font-size: 2.8rem; */
     padding-left: 48px;
     padding-left: 3rem;
 }
 .social-media {
     position: absolute;
     left: 50%;
-    bottom: 2rem;
+    bottom: 4rem;
     transform: translateX(-50%);
 }
 .social-media__list {
@@ -520,8 +518,24 @@ nav, main {
     margin-top: 1.5rem;
 }
 
-#email-photo, #phone-photo {
+#email-photo,
+#phone-photo,
+#kash-photo {
+    width: 30vw;
     transition: 1s opacity ease;
+}
+#email-photo {
+    left: 4rem;
+    top: 4rem;
+}
+#phone-photo {
+    right: 4rem;
+    bottom: 4rem;
+}
+#kash-photo {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 @media screen and (orientation: portrait){
     .social-media__list {
@@ -941,6 +955,14 @@ nav, main {
         height: 3.2rem;
         width: 3.2rem;
     }
+    #email-photo {
+        left: 2rem;
+        top: 2rem;
+    }
+    #phone-photo {
+        right: 2rem;
+        bottom: 2rem;
+    }
 }
 
 @media screen and (max-width: 53rem) and (orientation: portrait) {
@@ -978,6 +1000,11 @@ nav, main {
     .project__client {
         font-size: 18px;
         font-size: 1.8rem;
+    }
+    #email-photo,
+    #phone-photo,
+    #kash-photo {
+        width: 39vw;
     }
 }
 
@@ -1101,6 +1128,11 @@ nav, main {
     [src="../img/knack.png"] {
         transform: scale(0.4);
     }
+    #email-photo,
+    #phone-photo,
+    #kash-photo {
+        width: 25vw;
+    }
 }
 
 @media screen and (max-width: 37rem) and (orientation: portrait){
@@ -1127,6 +1159,11 @@ nav, main {
     .slider-handlers__arrow {
         height: 3.5rem;
         width: 3.5rem;
+    }
+    #email-photo,
+    #phone-photo,
+    #kash-photo {
+        width: 39vw;
     }
 }
 @media screen and (max-width: 33rem) {
@@ -1218,6 +1255,11 @@ nav, main {
         height: 93%;
         right: -0.5rem;
         bottom: 0.6rem;
+    }
+    #email-photo,
+    #phone-photo,
+    #kash-photo {
+        width: 47vw;
     }
 }
 
