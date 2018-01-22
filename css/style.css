@@ -620,6 +620,9 @@ nav, main {
     .contact__name, .contact__data {
         font-size: 4vw;
     }
+    /* .project__client {
+
+    } */
 }
 
 @media screen and (max-width: 93rem) and (orientation: portrait){
@@ -725,6 +728,9 @@ nav, main {
         height: 6rem;
         width: 6rem;
     }
+    [src="../img/colombia.png"] {
+        width: 66vw;
+    }
 }
 
 @media screen and (max-width: 70rem) {
@@ -776,7 +782,7 @@ nav, main {
         font-size: 2.4rem;
     }
     .project__client-wrap {
-        bottom: 5rem;
+        bottom: 2rem;
     }
     .social-media {
         bottom: 2.5rem;
@@ -962,8 +968,8 @@ nav, main {
         left: 0.8rem;
     }
     .slider-handlers__arrow {
-        height: 3.7rem;
-        width: 3.7rem;
+        height: 4rem;
+        width: 4rem;
     }
     .project__loc {
         font-size: 18px;
@@ -1019,10 +1025,10 @@ nav, main {
     }
     .slider-handlers__arrow:after {
         position: absolute;
-        left: -1rem;
-        top: -1rem;
-        bottom: -1rem;
-        right: -1rem;
+        left: -0.5rem;
+        top: -0.5rem;
+        bottom: -0.5rem;
+        right: -0.5rem;
         content: '';
     }
     .project__loc {
@@ -1058,6 +1064,7 @@ nav, main {
         font-size: 3.6em;
     }
     .project__loc {
+        margin: 0;
         font-size: 1rem;
     }
     .project__client {
@@ -1065,7 +1072,14 @@ nav, main {
         font-size: 1.6rem;
     }
     .project__client-wrap {
-        bottom: 6rem;
+        bottom: 2rem;
+    }
+    .slider-handlers__arrow {
+        height: 3.8rem;
+        width: 3.8rem;
+    }
+    [src="../img/colombia.png"] {
+        width: 80vw;
     }
 }
 @media screen and (max-width: 37rem) {
@@ -1079,6 +1093,13 @@ nav, main {
     }
     .project__client {
         font-size: 1.2rem;
+    }
+    .project__client {
+        margin-top: 0;
+    }
+    [src="../img/demorgen.png"],
+    [src="../img/knack.png"] {
+        transform: scale(0.4);
     }
 }
 
@@ -1103,6 +1124,10 @@ nav, main {
     .project__client {
         font-size: 1.6rem;
     }
+    .slider-handlers__arrow {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
 }
 @media screen and (max-width: 33rem) {
     .project,
@@ -1123,6 +1148,9 @@ nav, main {
     .contact__data {
         font-size: 1.5rem;
     }
+    .social-media {
+        bottom: 1rem;
+    }
 }
 
 @media screen and (max-width: 33rem) and (orientation: portrait){
@@ -1131,8 +1159,8 @@ nav, main {
         font-size: 2.8em;
     }
     .slider-handlers__arrow {
-        height: 2.5rem;
-        width: 2.5rem;
+        height: 3rem;
+        width: 3rem;
         bottom: 3rem;
     }
     .project__title-span:first-of-type {
@@ -1142,7 +1170,7 @@ nav, main {
         bottom: 1rem;
     }
     .project__client-wrap {
-        bottom: 4rem;
+        bottom: 1.5rem;
     }
     .social-media {
         bottom: 2rem;
@@ -1199,8 +1227,6 @@ nav, main {
         font-size: 2.3em;
     }
     .slider-handlers__arrow {
-        height: 2.2rem;
-        width: 2.2rem;
         bottom: 3rem;
     }
     .project__loc {
@@ -1235,8 +1261,8 @@ nav, main {
         font-size: 2.1em;
     }
     .slider-handlers__arrow {
-        height: 2rem;
-        width: 2rem;
+        height: 2.5rem;
+        width: 2.5rem;
         bottom: 3rem;
     }
     .project__title-span:first-of-type {
@@ -1255,13 +1281,19 @@ nav, main {
         font-size: 0.8rem;
     }
     .slider-handlers__arrow {
-        height: 1.8rem;
-        width: 1.8rem;
+        height: 2.2rem;
+        width: 2.2rem;
         bottom: 4.2rem;
     }
 }
 @media screen and (max-width: 21rem) and (orientation: portrait){
     .slider-handlers__arrow {
         bottom: 3rem;
+    }
+    [src="../img/charlie.png"] {
+        transform: scale(0.8);
+    }
+    [src="../img/demorgen.png"], [src="../img/knack.png"] {
+        transform: scale(0.35);
     }
 }
