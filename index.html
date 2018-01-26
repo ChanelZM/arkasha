@@ -11,20 +11,21 @@
 <body class="home">
     <nav class="top-nav">
         <h1 class="home-button">
-            <a href="index.html" class="basic-link current-page" tabindex="1">Kash</a>
+            <a href="index.html" class="basic-link current-page" tabindex="1" id="nav-kash">Kash</a>
         </h1>
         <ul class="basic-nav top-nav__menu">
             <li class="top-nav__item basic-nav__item">
-                <a href="content/werk.html" class="top-nav__link basic-link" tabindex="2">Werk</a>
+                <a href="content/werk.html" class="top-nav__link basic-link" tabindex="2" id="nav-work">Werk</a>
             </li>
             <li class="top-nav__item basic-nav__item">
-                <a href="content/contact.html" class="top-nav__link basic-link" tabindex="3">Contact</a>
+                <a href="content/contact.html" class="top-nav__link basic-link" tabindex="3" id="nav-contact">Contact</a>
             </li>
         </ul>
     </nav>
     <h2 class="opening-word">
-        <span class="insert-text" id="name" tabindex="4">Kash/Arkasha Keysers</span> is journalist en copywriter. Ze heeft een lelijk geschrift, maar kan wel wat schrijven. <span class="insert-text" id="story" tabindex="5">Ze zoekt uw verhalen./Uw verhalen zoeken haar.</span> Kash maakt <span class="insert-text" id="topic" tabindex="6">reportages,/commerciële teksten,</span> vaak in een internationale context. Ze spreekt
-        <span class="insert-text" id="language" tabindex="7">Nederlands. /Spaans. /Duits. /Engels. </span> <span class="insert-text" id="contact" tabindex="8">Bel/Mail/Skype</span> haar met een <span class="insert-text" id="project" tabindex="9">goed verhaal/zakelijk voorstel/onnozel idee.</span> Gewoon doen.
+        <span class="insert-text" id="name" tabindex="4">Arkasha Keysers/Kash</span> is journalist en copywriter. Ze heeft een lelijk geschrift, maar kan wel wat schrijven. <span class="insert-text" id="story" tabindex="5">Uw verhalen zoeken haar./Zij zoekt uw verhalen.</span> Kash maakt <span class="insert-text" id="topic" tabindex="6">reportages,/artikels,/commerciële teksten,</span> vaak in een internationale context. Ze spreekt
+        <span class="insert-text" id="language" tabindex="7">Nederlands. /Spaans. /Duits. /Engels. </span> <span class="insert-text" id="contact" tabindex="8">Bel/Mail/WhatsApp</span> haar met een <span class="insert-text" id="project" tabindex="9">onnozel idee./goed verhaal./zakelijk voorstel.</span>
+        <span class="hover-sound" tabindex="9">Gewoon doen.</span>
     </h2>
     <nav class="social-media">
         <ul class="basic-nav social-media__list">
@@ -40,16 +41,29 @@
         </ul>
     </nav>
     <div class="fake-loader">
-        <img src="img/signature.gif" />
+        <img src="img/signature.gif" alt="Animation of Arkasha's signature" />
     </div>
     <audio class="ticking-sound">
         <source src="audio/ticking-sound.mp3" type="audio/mpeg" />
+    </audio>
+    <audio class="do-it">
+        <source src="audio/gewoondoen.mp3" type="audio/mpeg" />
+    </audio>
+    <audio class="sound-kash">
+        <source src="audio/kash.mp3" type="audio/mpeg" />
+    </audio>
+    <audio class="sound-werk">
+        <source src="audio/werk.mp3" type="audio/mpeg" />
+    </audio>
+    <audio class="sound-contact">
+        <source src="audio/contact.mp3" type="audio/mpeg" />
     </audio>
     <script>
         setTimeout(function(){
             document.querySelector('.fake-loader').classList.add('hidden');
         }, 2700);
     </script>
+    <script src="js/link-effects.js"></script>
     <script src="js/erase-word.js"></script>
 </body>
 </html>

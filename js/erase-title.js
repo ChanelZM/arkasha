@@ -80,10 +80,6 @@
         isAnimating = true;
         projectParent = document.querySelector('.project');
 
-        //Play sound
-        document.querySelector('.ticking-sound').play();
-        document.querySelector('.ticking-sound').addEventListener('ended', loopSound);
-
         var spans = projectParent.querySelectorAll('.project__title-span'),
             firstTimeoutTime = (spans[1].innerHTML.length + 1) * speed,
             secondTimeoutTime = (spans[0].innerHTML.length + 1) * speed;
@@ -102,6 +98,10 @@
 
         //When both animations are done, start typing next project
         setTimeout(function(){
+            //Play sound
+            document.querySelector('.ticking-sound').play();
+            document.querySelector('.ticking-sound').addEventListener('ended', loopSound);
+
             typeWord(spans);
         }, (firstTimeoutTime + secondTimeoutTime));
     }

@@ -21,10 +21,13 @@
         document.querySelector('.insert-text').classList.add('animate-border');
 
         for(i = 0; i < homeTypingText.length; i++){
-            splitToArray(homeTypingText[i], homeTypingText[i].id);
+            words[homeTypingText[i].id] = {
+                arrWord: splitToArray(homeTypingText[i], homeTypingText[i].id),
+                position: 0
+            };
 
             //Refill HTML with only a single word
-            homeTypingText[i].innerHTML = words[homeTypingText[i].id][0];
+            homeTypingText[i].innerHTML = words[homeTypingText[i].id].arrWord[0];
 
             if("ontouchstart" in document.documentElement == false){
                 homeTypingText[i].addEventListener('focus', checkIfStillAnimating);
@@ -36,8 +39,8 @@
     }
 
     //Get every word out of the html and make an array of it
-    function splitToArray(el, id){
-        words[id] = el.innerHTML.split('/');
+    function splitToArray(el){
+        return el.innerHTML.split('/');
     }
 
     //The animation can't be triggered again during an animation
@@ -54,10 +57,6 @@
     function eraseWord(e, prevWord, id){
         isAnimating = true;
         num = prevWord.length;
-
-        //Play sound
-        document.querySelector('.ticking-sound').play();
-        document.querySelector('.ticking-sound').addEventListener('ended', loopSound);
 
         loopThroughLetters(e.target, 'subtract', prevWord, 0, id);
     }
@@ -81,22 +80,19 @@
             } else if(type == 'subtract' && num > max){
                 loopThroughLetters(elem, type, word, max, id);
             } else if(type == 'subtract' && num == max){
-                var newWord = comparePrevAndNextWord(elem, word, id);
-                typeWord(elem, newWord, id);
+                if(words[id].position == words[id].arrWord.length - 1){
+                    words[id].position = 0;
+                } else {
+                    words[id].position = words[id].position + 1;
+                }
+
+                typeWord(elem, words[id].arrWord[words[id].position], id);
+
+                //Play sound
+                document.querySelector('.ticking-sound').play();
+                document.querySelector('.ticking-sound').addEventListener('ended', loopSound);
             }
         }, writeSpeed);
-    }
-
-    //Get a new word to be written in the html
-    function comparePrevAndNextWord(elem, compareWord, id){
-        randNum = Math.floor(Math.random() * words[id].length);
-
-        if(words[id][randNum] == compareWord) {
-            comparePrevAndNextWord(elem, compareWord, id);
-        }
-        if(words[id][randNum] != compareWord){
-            return words[id][randNum];
-        }
     }
 
     function typeWord(elem, word, id){
@@ -113,7 +109,7 @@
         }, (speed.typing * word.length));
     }
 
-    //Sorry internet explorer >=8
+    //Sorry internet explorer >=8 Typing animation will only work on IE9 or above
     if(document.addEventListener){
         init();
     }
