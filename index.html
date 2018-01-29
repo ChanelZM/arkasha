@@ -44,6 +44,7 @@
         <video class="fake-loader__video">
             <source src="video/signature.mp4" type="video/mp4" autoplay>
         </video>
+        <img src="img/signature.gif" alt="Signature of Arkasha"class="fake-loader__gif" hidden />
     </div>
     <audio class="ticking-sound">
         <source src="audio/type5.mp3" type="audio/mpeg" />
@@ -61,15 +62,22 @@
         <source src="audio/contact.mp3" type="audio/mpeg" />
     </audio>
     <script>
-        try {
-            document.querySelector('.fake-loader__video').play();
-        }
-        catch(err) {
-            console.log(err);
-        }
-        finally {
-            console.log('ik ga er toch iets van maken');
-        }
+        // try {
+        //     document.querySelector('.fake-loader__video').play();
+        // }
+        // catch(err) {
+        //     console.log(err);
+        // }
+        // finally {
+        //     console.log('ik ga er toch iets van maken');
+        //     document.querySelector('fake-loader__video').setAttribute('hidden', 'true');
+        //     document.querySelector('fake-loader__gif').removeAttribute('hidden');
+        //
+        //     setTimeout(function(){
+        //         document.querySelector('fake-loader__gif').setAttribute('hidden', 'true');
+        //     }, 3000);
+        // }
+        document.querySelector('.fake-loader__video').play();
 
         document.querySelector('.fake-loader__video').addEventListener('ended', function(){
             document.querySelector('.fake-loader').classList.add('hidden');

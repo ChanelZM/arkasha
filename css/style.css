@@ -321,7 +321,7 @@ nav, main {
     align-items: center;
     z-index: 2;
 }
-.fake-loader__video {
+.fake-loader__video, .fake-loader__gif {
     max-width: calc(100vw - 1rem);
 }
 
@@ -607,19 +607,19 @@ nav, main {
 
 @media screen and (max-width: 93rem) {
     .home-button {
-        font-size: 30px;
-        font-size: 2.3rem;
+        font-size: 34px;
+        font-size: 2.1rem;
     }
     .top-nav {
         margin: 80px 32px 80px 32px;
         margin: 5rem 5vw 3rem 5vw;
-        font-size: 30px;
-        font-size: 2.3rem;
+        font-size: 34px;
+        font-size: 2.1rem;
     }
     .opening-word {
         padding: 2rem 12vw;
-        font-size: 30px;
-        font-size: 2.3rem;
+        font-size: 34px;
+        font-size: 2.1rem;
     }
     .animate-border {
         padding-right: 0.7rem;
