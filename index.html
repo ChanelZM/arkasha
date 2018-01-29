@@ -63,10 +63,14 @@
     <script>
         try {
             document.querySelector('.fake-loader__video').play();
-        } catch(err) {
+        }
+        catch(err) {
             console.log(err);
         }
-        
+        finally {
+            console.log('ik ga er toch iets van maken');
+        }
+
         document.querySelector('.fake-loader__video').addEventListener('ended', function(){
             document.querySelector('.fake-loader').classList.add('hidden');
         });
