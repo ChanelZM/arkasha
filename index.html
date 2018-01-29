@@ -61,7 +61,12 @@
         <source src="audio/contact.mp3" type="audio/mpeg" />
     </audio>
     <script>
-        document.querySelector('.fake-loader__video').play();
+        try {
+            document.querySelector('.fake-loader__video').play();
+        } catch(err) {
+            console.log(err);
+        }
+        
         document.querySelector('.fake-loader__video').addEventListener('ended', function(){
             document.querySelector('.fake-loader').classList.add('hidden');
         });
