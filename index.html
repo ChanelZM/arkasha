@@ -79,9 +79,15 @@
         // }
         document.querySelector('.fake-loader__video').play();
 
-        document.querySelector('.fake-loader__video').addEventListener('ended', function(){
-            document.querySelector('.fake-loader').classList.add('hidden');
-        });
+        if(document.addEventListener){
+            document.querySelector('.fake-loader__video').addEventListener('ended', function(){
+                document.querySelector('.fake-loader').classList.add('hidden');
+            });
+        } else {
+            document.querySelector('.fake-loader__video').attachEvent('onended', function(){
+                document.querySelector('.fake-loader').className += ' hidden';
+            });
+        }
     </script>
     <script src="js/link-effects.js"></script>
     <script src="js/erase-word.js"></script>
