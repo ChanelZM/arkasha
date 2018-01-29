@@ -81,7 +81,11 @@
 
         if(document.addEventListener){
             document.querySelector('.fake-loader__video').addEventListener('ended', function(){
-                document.querySelector('.fake-loader').classList.add('hidden');
+                if(document.querySelector('.fake-loader').classList){
+                    document.querySelector('.fake-loader').classList.add('hidden');
+                } else {
+                    document.querySelector('.fake-loader').className += ' hidden';
+                }
             });
         } else {
             document.querySelector('.fake-loader__video').attachEvent('onended', function(){
