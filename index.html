@@ -42,7 +42,7 @@
     </nav>
     <div class="fake-loader">
         <video class="fake-loader__video">
-            <source src="video/signature.mp4" type="video/mp4" nocontrols autoplay>
+            <source src="video/signature.mp4" type="video/mp4" autoplay>
         </video>
     </div>
     <audio class="ticking-sound">
@@ -61,7 +61,7 @@
         <source src="audio/contact.mp3" type="audio/mpeg" />
     </audio>
     <script>
-        document.querySelector('.fake-loader__video').play();
+        document.querySelector('.fake-loader__video').load();
         document.querySelector('.fake-loader__video').addEventListener('ended', function(){
             document.querySelector('.fake-loader').classList.add('hidden');
         });
