@@ -133,7 +133,7 @@ nav, main {
     cursor: text;
     cursor: url('../img/text.png'), text;
 }
-.insert-text::before,
+.insert-text:before,
 .current-page:before,
 .project__title-span:before,
 .hover-sound:before{
@@ -174,7 +174,6 @@ nav, main {
     margin: 7rem 5vw 3rem 5vw;
     font-size: 45px;
     font-size: 2.8rem;
-    text-transform: uppercase;
     z-index: 1;
 }
 .top-nav__menu {
@@ -312,10 +311,13 @@ nav, main {
     top: 0;
     bottom: 0;
     right: 0;
-    background-color: #FDE1CD;
+    background-color: #fce3d1;
     justify-content: center;
     align-items: center;
     z-index: 2;
+}
+.fake-loader__video {
+    max-width: calc(100vw - 1rem);
 }
 
 /* WORK */
@@ -342,7 +344,7 @@ nav, main {
     transition: 1s ease opacity;
 }
 [src="../img/alone.png"] {
-    bottom: -17rem;
+    bottom: -23vw;
     left: 0;
     width: 100%;
 }
@@ -358,7 +360,7 @@ nav, main {
     transform: translateY(-50%);
 }
 [src="../img/prison.png"] {
-    width: 100%;
+    width: 70vw;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -376,12 +378,13 @@ nav, main {
     transform: translate(-50%, -50%);
 }
 [src="../img/red.png"] {
-    width: 100%;
-    left: 0;
+    width: 70vw;
+    left: 50%;
     bottom: 0;
+    transform: translateX(-50%);
 }
-[src="../img/behind-the-scenes.png"] {
-    width: 30vw;
+[src="../img/behind-the-scene.png"] {
+    width: 40vw;
     left: 4rem;
     top: 50%;
     transform: translateY(-50%);
@@ -617,7 +620,8 @@ nav, main {
         padding-right: 0.7rem;
     }
     .insert-text:before,
-    .current-page:before {
+    .current-page:before,
+    .hover-sound:before {
         height: 30px;
         height: 1.9rem;
         right: -5px;
@@ -703,7 +707,7 @@ nav, main {
     }
     .project__title-span:before {
         height: 5rem;
-        bottom: 1.7rem;
+        bottom: 2rem;
         right: -1rem;
     }
     .project__title-span:first-of-type {
@@ -773,7 +777,8 @@ nav, main {
         font-size: 2.1rem;
     }
     .insert-text:before,
-    .current-page:before {
+    .current-page:before,
+    .hover-sound:before {
         height: 1.5rem;
         bottom: 48%;
     }
@@ -845,7 +850,7 @@ nav, main {
         font-size: 1.1rem;
     }
     .project__client {
-        font-size: 1.5rem;
+        height: 3.3rem;
     }
 }
 
@@ -881,7 +886,8 @@ nav, main {
     }
     .insert-text:before,
     .current-page:before,
-    .project__title-span:before {
+    .project__title-span:before,
+    .hover-sound:before {
         height: 1.3rem;
     }
     .current-page:before {
@@ -898,6 +904,15 @@ nav, main {
    .project__title-span:first-of-type:after,
    .project__title-span:last-of-type:after {
        top: -2rem;
+   }
+   [src="../img/red.png"] {
+       width: 58vw;
+   }
+   [src="../img/behind-the-scene.png"] {
+       width: 32vw;
+   }
+   [src="../img/scissors.png"] {
+       width: 70%;
    }
 }
 
@@ -922,6 +937,10 @@ nav, main {
     .project__client {
         font-size: 2rem;
     }
+    [src="../img/behind-the-scene.png"] {
+        width: 48vw;
+        left: 0;
+    }
 }
 
 @media screen and (max-width: 53rem) {
@@ -943,7 +962,8 @@ nav, main {
         border-right: 4px solid white;
     }
     .insert-text:before,
-    .current-page:before {
+    .current-page:before,
+    .hover-sound:before {
         height: 1.2rem;
         bottom: 45%;
     }
@@ -1000,7 +1020,8 @@ nav, main {
     }
     .insert-text:before,
     .current-page:before,
-    .project__title-span:before {
+    .project__title-span:before,
+    .hover-sound:before {
         left: 13px;
         left: 0.8rem;
     }
@@ -1077,10 +1098,10 @@ nav, main {
         font-size: 0.9rem;
     }
     .project__client {
-        font-size: 1.4rem;
+        height: 3rem;
     }
     .project__client-wrap {
-        bottom: 2.5rem;
+        bottom: 1rem;
     }
     .contact {
         width: 22rem;
@@ -1127,7 +1148,7 @@ nav, main {
 @media screen and (max-width: 37rem) {
     .project__title {
         width: 26rem;
-        font-size: 2.7em;
+        font-size: 2.5em;
     }
     .slider-handlers__arrow {
         height: 2.2rem;
@@ -1192,7 +1213,7 @@ nav, main {
         margin-top: 0;
     }
     .project__client-wrap {
-        bottom: 1.3rem;
+        bottom: 0;
     }
     .slider-handlers__arrow {
         bottom: 4.5rem;
@@ -1265,7 +1286,8 @@ nav, main {
     }
     .insert-text:before,
     .current-page:before,
-    .project__title-span:before {
+    .project__title-span:before,
+    .hover-sound:before {
         height: 61%;
         bottom: 41%;
         right: -0.2rem;

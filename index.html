@@ -41,10 +41,12 @@
         </ul>
     </nav>
     <div class="fake-loader">
-        <img src="img/signature.gif" alt="Animation of Arkasha's signature" />
+        <video class="fake-loader__video">
+            <source src="video/signature.mp4" type="video/mp4" nocontrols autoplay>
+        </video>
     </div>
     <audio class="ticking-sound">
-        <source src="audio/ticking-sound.mp3" type="audio/mpeg" />
+        <source src="audio/type5.mp3" type="audio/mpeg" />
     </audio>
     <audio class="do-it">
         <source src="audio/gewoondoen.mp3" type="audio/mpeg" />
@@ -59,9 +61,10 @@
         <source src="audio/contact.mp3" type="audio/mpeg" />
     </audio>
     <script>
-        setTimeout(function(){
+        document.querySelector('.fake-loader__video').play();
+        document.querySelector('.fake-loader__video').addEventListener('ended', function(){
             document.querySelector('.fake-loader').classList.add('hidden');
-        }, 2700);
+        });
     </script>
     <script src="js/link-effects.js"></script>
     <script src="js/erase-word.js"></script>

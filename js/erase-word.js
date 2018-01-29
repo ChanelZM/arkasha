@@ -6,7 +6,7 @@
         num = 0,
         isAnimating = false,
         speed = {
-            typing: 50,
+            typing: 70,
             erasing: 25
         };
 
@@ -85,12 +85,7 @@
                 } else {
                     words[id].position = words[id].position + 1;
                 }
-
                 typeWord(elem, words[id].arrWord[words[id].position], id);
-
-                //Play sound
-                document.querySelector('.ticking-sound').play();
-                document.querySelector('.ticking-sound').addEventListener('ended', loopSound);
             }
         }, writeSpeed);
     }
@@ -98,6 +93,10 @@
     function typeWord(elem, word, id){
         num = 0;
         elem.style.minWidth = '0px';
+
+        //Play sound
+        document.querySelector('.ticking-sound').play();
+        document.querySelector('.ticking-sound').addEventListener('ended', loopSound);
 
         loopThroughLetters(elem, 'add', word, word.length, id);
         //After the animation, another animation can start again
