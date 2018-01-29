@@ -347,6 +347,7 @@ nav, main {
     display: inline-block;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 .project__img {
     position: absolute;
