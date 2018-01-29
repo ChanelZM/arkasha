@@ -366,42 +366,63 @@ nav, main {
     width: 32vw;
     left: 10vw;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 [src="../img/prison.png"] {
     width: 70vw;
     left: 50%;
     top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 [src="../img/goodshithappens.png"] {
     height: 100%;
     left: 50%;
     top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 [src="../img/bucket.png"] {
     height: 80%;
     left: 50%;
     top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 [src="../img/red.png"] {
     width: 70vw;
     left: 50%;
     bottom: 0;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 }
 [src="../img/behind-the-scene.png"] {
     width: 40vw;
     left: 4rem;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 [src="../img/scissors.png"] {
     width: 80%;
     left: 50%;
     top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -465,6 +486,9 @@ nav, main {
     display: block;
     margin-top: 0.5rem;
     height: 4.3rem;
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
     transform: scale(1.4);
 }
 .project__client:visited {
@@ -498,12 +522,6 @@ nav, main {
     right: 5vw;
     background-image: url('../img/next-arrow.svg');
 }
-/* [src="../img/demorgen.png"]{
-    transform: scale(0.6);
-}
-[src="../img/knack.png"]{
-    transform: scale(0.5);
-} */
 
 /* CONTACT */
 .contactpage {
@@ -565,6 +583,9 @@ nav, main {
 #kash-photo {
     left: 50%;
     top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 @media screen and (orientation: portrait){
@@ -588,6 +609,9 @@ nav, main {
         width: 56vw;
         left: 5vw;
         top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
         transform: translateY(-50%);
     }
     [src="../img/goodshithappens.png"] {
@@ -605,6 +629,9 @@ nav, main {
 @media screen and (orientation: landscape){
     .slider-handlers__arrow {
         top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
         transform: translateY(-50%);
     }
 }
@@ -1183,6 +1210,9 @@ nav, main {
     }
     [src="../img/demorgen.png"],
     [src="../img/knack.png"] {
+        -webkit-transform: scale(0.4);
+        -moz-transform: scale(0.4);
+        -ms-transform: scale(0.4);
         transform: scale(0.4);
     }
     #email-photo,
@@ -1400,10 +1430,4 @@ nav, main {
     .slider-handlers__arrow {
         bottom: 3rem;
     }
-    /* [src="../img/charlie.png"] {
-        transform: scale(0.8);
-    }
-    [src="../img/demorgen.png"], [src="../img/knack.png"] {
-        transform: scale(0.35);
-    } */
 }
