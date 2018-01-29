@@ -189,10 +189,15 @@ nav, main {
     padding-left: 3rem;
 }
 .social-media {
+    margin-left: auto;
+    margin-right: auto;
+}
+.social-media-absolute {
     position: absolute;
-    left: 50%;
     bottom: 4rem;
-    transform: translateX(-50%);
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%);
 }
 .social-media__list {
     display: flex;
@@ -642,6 +647,9 @@ nav, main {
     .project__title-span:first-of-type {
         margin-bottom: 4rem;
     }
+    .project__client-wrap {
+        bottom: 2rem;
+    }
     .current-page:before {
         height: 80%;
     }
@@ -671,7 +679,7 @@ nav, main {
     }
     .project__client {
         margin-top: 1rem;
-        font-size: 3rem;
+        height: 4.8rem;
     }
     .project__title-span:first-of-type:after {
         left: -6vw;
@@ -793,8 +801,8 @@ nav, main {
        height: 1.8rem;
        width: 1.8rem;
    }
-   .social-media {
-       bottom: 1rem;
+   .social-media-absolute {
+       bottom: 3rem;
    }
 }
 
@@ -872,9 +880,6 @@ nav, main {
     .project__loc {
         font-size: 1.5rem;
     }
-    .project__client {
-        font-size: 2.2rem;
-    }
 }
 
 @media screen and (max-width: 59rem) {
@@ -941,6 +946,12 @@ nav, main {
         width: 48vw;
         left: 0;
     }
+    [src="../img/red.png"] {
+        width: 100vw;
+    }
+    [src="../img/scissors.png"] {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 53rem) {
@@ -989,6 +1000,9 @@ nav, main {
     .slider-handlers__arrow {
         height: 3.2rem;
         width: 3.2rem;
+    }
+    .contact {
+        margin-top: 1rem;
     }
     #email-photo {
         left: 2rem;
@@ -1108,7 +1122,7 @@ nav, main {
     }
     .contact__name,
     .contact__data {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 }
 
@@ -1132,7 +1146,7 @@ nav, main {
     }
     .project__client {
         margin-top: 0.4rem;
-        font-size: 1.6rem;
+        height: 4.5rem;
     }
     .project__client-wrap {
         bottom: 2rem;
@@ -1160,6 +1174,9 @@ nav, main {
     .project__client {
         margin-top: 0;
     }
+    .social-media__list {
+        width: 9rem;
+    }
     [src="../img/demorgen.png"],
     [src="../img/knack.png"] {
         transform: scale(0.4);
@@ -1181,16 +1198,16 @@ nav, main {
         font-size: 22px;
         font-size: 1.4rem;
     }
-    .slider-handlers__arrow {
-        height: 3rem;
-        width: 3rem;
-    }
     .project__title {
         width: 26rem;
         font-size: 3em;
     }
     .project__client {
-        font-size: 1.6rem;
+        height: 4rem;
+    }
+    .social-media__icons {
+        height: 2rem;
+        width: 2rem;
     }
     .slider-handlers__arrow {
         height: 3.5rem;
@@ -1219,7 +1236,7 @@ nav, main {
         bottom: 4.5rem;
     }
     .contact {
-        width: 67%;
+        width: 65%;
     }
     .contact__name,
     .contact__data {
@@ -1247,7 +1264,7 @@ nav, main {
         bottom: 1rem;
     }
     .project__client-wrap {
-        bottom: 1.5rem;
+        bottom: 1.9rem;
     }
     .social-media {
         bottom: 2rem;
@@ -1258,6 +1275,9 @@ nav, main {
     .social-media__icons {
         height: 1.8rem;
         width: 1.8rem;
+    }
+    [src="../img/alone.png"] {
+        bottom: -4vw;
     }
 }
 
@@ -1312,11 +1332,8 @@ nav, main {
     .slider-handlers__arrow {
         bottom: 3rem;
     }
-    .project__loc {
-        font-size: 0.9rem;
-    }
     .project__client {
-        font-size: 1.2rem;
+        height: 3.5rem;
     }
     .project__title-span:before {
         height: 83%;
@@ -1350,6 +1367,12 @@ nav, main {
     }
     .project__title-span:first-of-type {
         margin-bottom: 1.3rem;
+    }
+    .project__loc {
+        font-size: 0.9rem;
+    }
+    .project__client {
+        height: 2.8rem;
     }
 }
 @media screen and (max-width: 21rem){
