@@ -69,10 +69,10 @@
             video.click();
         });
 
-        // video.addEventListener('click', function(){
-        //     console.log('clicked');
-        //     video.play();
-        // });
+        videoWrap.addEventListener('click', function(){
+            console.log('clicked');
+            video.play();
+        });
 
         if(document.addEventListener){
             video.addEventListener('ended', function(){
