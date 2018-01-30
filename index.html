@@ -77,11 +77,14 @@
         //         document.querySelector('fake-loader__gif').setAttribute('hidden', 'true');
         //     }, 3000);
         // }
-        if(document.querySelector('.fake-loader__video').play){
+        // if(document.querySelector('.fake-loader__video').play){
+        //     document.querySelector('.fake-loader__video').play();
+        // } else {
+        //     console.log('blocked');
+        // }
+        document.querySelector('.fake-loader__video').addEventListener('loadstart', function(){
             document.querySelector('.fake-loader__video').play();
-        } else {
-            console.log('blocked');
-        }
+        });
 
         if(document.addEventListener){
             document.querySelector('.fake-loader__video').addEventListener('ended', function(){
