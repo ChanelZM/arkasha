@@ -41,7 +41,7 @@
         </ul>
     </nav>
     <div class="fake-loader">
-        <video class="fake-loader__video">
+        <video class="fake-loader__video" controls>
             <source src="video/signature.mp4" type="video/mp4" muted>
         </video>
         <img src="img/signature.gif" alt="Signature of Arkasha"class="fake-loader__gif" hidden />
@@ -66,9 +66,7 @@
             videoWrap = document.querySelector('.fake-loader');
 
         window.addEventListener('load', function(e){
-            setTimeout(function(){
-                videoWrap.click();
-            }, 2);
+            videoWrap.click();
         });
 
         videoWrap.addEventListener('click', function(){
