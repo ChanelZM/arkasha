@@ -307,9 +307,8 @@ nav, main {
     letter-spacing: 0.05rem;
     line-height: 1.6;
 }
-@supports (transform: translateY(-50%)){
+@supports (max-width: 100rem){
     .opening-word {
-        position: absolute;
         padding-top: 2rem;
         margin: 7rem auto 0 auto;
         max-width: 100rem;
@@ -684,23 +683,31 @@ nav, main {
 }
 @media screen and (orientation: portrait){
     .social-media__list {
+        width: 208px;
         width: 13rem;
     }
     .social-media {
+        bottom: 48px;
         bottom: 3rem;
     }
     .social-media__icons {
+        height: 48px;
         height: 3rem;
+        width: 48px;
         width: 3rem;
     }
     .project__client-wrap {
+        bottom: 96px;
         bottom: 6rem;
     }
     [src="../img/colombia.png"] {
+        width: 83%;
         width: 83vw;
     }
     [src="../img/letter.png"] {
+        width: 56%;
         width: 56vw;
+        left: 5%;
         left: 5vw;
         top: 50%;
         -webkit-transform: translateY(-50%);
@@ -716,6 +723,7 @@ nav, main {
         width: 100%;
     }
     [src="../img/water.png"] {
+        width: 63%;
         width: 63vw;
     }
 }
@@ -732,18 +740,14 @@ nav, main {
 
 @media screen and (max-width: 93rem) {
     .home-button {
-        font-size: 34px;
         font-size: 2.1rem;
     }
     .top-nav {
-        margin: 80px 32px 80px 32px;
         margin: 5rem 5vw 3rem 5vw;
-        font-size: 34px;
         font-size: 2.1rem;
     }
     .opening-word {
         padding: 2rem 12vw;
-        font-size: 34px;
         font-size: 2.1rem;
     }
     .animate-border {
@@ -752,20 +756,15 @@ nav, main {
     .insert-text:before,
     .current-page:before,
     .hover-sound:before {
-        height: 30px;
         height: 1.9rem;
-        right: -5px;
         right: -0.3rem;
         bottom: 50%;
     }
     .project__title {
-        width: 880px;
         width: 55rem;
-        font-size: 96px;
         font-size: 6em;
     }
     .project__title-span:before {
-        height: 80px;
         height: 5rem;
         bottom: 2rem;
     }
@@ -789,9 +788,6 @@ nav, main {
     .contact__name, .contact__data {
         font-size: 4vw;
     }
-    /* .project__client {
-
-    } */
 }
 
 @media screen and (max-width: 93rem) and (orientation: portrait){
@@ -821,12 +817,10 @@ nav, main {
 
 @media screen and (max-width: 78rem) {
     .home-button, .top-nav {
-        font-size: 30px;
         font-size: 2.3rem;
     }
     .opening-word {
         padding: 2rem 11vw;
-        font-size: 30px;
         font-size: 2.3rem;
     }
     .slider-handlers__arrow {

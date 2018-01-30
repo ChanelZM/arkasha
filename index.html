@@ -42,7 +42,7 @@
     </nav>
     <div class="fake-loader">
         <video class="fake-loader__video">
-            <source src="video/signature.mp4" type="video/mp4" autoplay>
+            <source src="video/signature.mp4" type="video/mp4" autoplay muted>
         </video>
         <img src="img/signature.gif" alt="Signature of Arkasha"class="fake-loader__gif" hidden />
     </div>
@@ -77,7 +77,11 @@
         //         document.querySelector('fake-loader__gif').setAttribute('hidden', 'true');
         //     }, 3000);
         // }
-        document.querySelector('.fake-loader__video').play();
+        if(document.querySelector('.fake-loader__video').play){
+            document.querySelector('.fake-loader__video').play();
+        } else {
+            console.log('blocked');
+        }
 
         if(document.addEventListener){
             document.querySelector('.fake-loader__video').addEventListener('ended', function(){
