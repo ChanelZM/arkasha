@@ -82,9 +82,14 @@
         // } else {
         //     console.log('blocked');
         // }
-        document.querySelector('.fake-loader__video').addEventListener('loadstart', function(){
-            document.querySelector('.fake-loader__video').play();
+        window.addEventListener('load', function(e){
+            document.querySelector('.fake-loader__video').click();
         });
+
+        document.querySelector('.fake-loader__video').addEventListener('click', function(){
+            console.log('clicked');
+            document.querySelector('.fake-loader__video').play();
+        })
 
         if(document.addEventListener){
             document.querySelector('.fake-loader__video').addEventListener('ended', function(){
