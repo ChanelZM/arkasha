@@ -120,8 +120,10 @@ nav, main {
     color: #741242;
     text-decoration: none;
 }
+.insert-text:focus {
+    outline: white;
+}
 .basic-link:focus,
-.insert-text:focus,
 .project__client:focus,
 .slider-handlers__arrow:focus {
     outline: none;
