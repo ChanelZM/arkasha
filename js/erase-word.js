@@ -95,8 +95,10 @@
         elem.style.minWidth = '0px';
 
         //Play sound
-        document.querySelector('.ticking-sound').play();
-        document.querySelector('.ticking-sound').addEventListener('ended', loopSound);
+        if("ontouchstart" in document.documentElement == false){
+            document.querySelector('.ticking-sound').play();
+            document.querySelector('.ticking-sound').addEventListener('ended', loopSound);
+        }
 
         loopThroughLetters(elem, 'add', word, word.length, id);
         //After the animation, another animation can start again
