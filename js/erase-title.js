@@ -10,7 +10,8 @@
         isAnimating = false,
         speed = 50;
 
-    var nextProject;
+    var nextProject,
+        loopInterval;
 
     function init(){
         var noneDisplayPro = document.querySelectorAll('.project:not(:first-of-type)');
@@ -87,13 +88,17 @@
         //Start animation of first span
         num = spans[1].innerHTML.length;
         spans[1].classList.add('animate-border');
-        loopThroughLetters(spans[1], 'subtract', projectsInfo[prevNum].title[1], 0);
+        loopInterval = setInterval(function(){
+            loopThroughLetters(spans[1], 'subtract', projectsInfo[prevNum].title[1], 0);
+        }, speed);
 
         //Start animation of second span
         setTimeout(function(){
             num = spans[0].innerHTML.length;
             spans[0].classList.add('animate-border');
-            loopThroughLetters(spans[0], 'subtract', projectsInfo[prevNum].title[0], 0);
+            loopInterval = setInterval(function(){
+                loopThroughLetters(spans[0], 'subtract', projectsInfo[prevNum].title[0], 0);
+            }, speed);
         }, firstTimeoutTime);
 
         //When both animations are done, start typing next project
@@ -120,14 +125,17 @@
         }
         elem.innerHTML = word.substring(0, num);
 
+        if(num == max){
+            clearInterval(loopInterval);
+        }
         //This function will be called over and over until the word is written or totally erased
-        setTimeout(function(){
-            if(type == 'add' && num < max){
-                loopThroughLetters(elem, type, word, max);
-            } else if(type == 'subtract' && num > max){
-                loopThroughLetters(elem, type, word, max);
-            }
-        }, speed);
+        // setTimeout(function(){
+        //     if(type == 'add' && num < max){
+        //         loopThroughLetters(elem, type, word, max);
+        //     } else if(type == 'subtract' && num > max){
+        //         loopThroughLetters(elem, type, word, max);
+        //     }
+        // }, speed);
     }
 
     function typeWord(elements){
@@ -141,13 +149,19 @@
 
         nextWord = projectsInfo[count].title[0];
         num = 0;
-        loopThroughLetters(elements[0], 'add', nextWord, nextWord.length);
+
+        loopInterval = setInterval(function(){
+            loopThroughLetters(elements[0], 'add', nextWord, nextWord.length);
+        }, speed);
 
         setTimeout(function(){
             elements[0].classList.remove('animate-border');
             nextWord = projectsInfo[count].title[1];
             num = 0;
-            loopThroughLetters(elements[1], 'add', nextWord, nextWord.length);
+
+            loopInterval = setInterval(function(){
+                loopThroughLetters(elements[1], 'add', nextWord, nextWord.length);
+            }, speed);
         }, firstTimeoutTime);
 
         setTimeout(function(){
