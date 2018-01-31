@@ -8,7 +8,10 @@
         count = 0,
         num = 0,
         isAnimating = false,
-        speed = 50;
+        speed = {
+            typing: 70,
+            erasing: 25
+        };
 
     var nextProject;
 
@@ -81,8 +84,8 @@
         projectParent = document.querySelector('.project');
 
         var spans = projectParent.querySelectorAll('.project__title-span'),
-            firstTimeoutTime = (spans[1].innerHTML.length + 1) * speed,
-            secondTimeoutTime = (spans[0].innerHTML.length + 1) * speed;
+            firstTimeoutTime = (spans[1].innerHTML.length + 1) * speed.erasing,
+            secondTimeoutTime = (spans[0].innerHTML.length + 1) * speed.erasing;
 
         //Start animation of first span
         num = spans[1].innerHTML.length;
@@ -112,7 +115,10 @@
     }
 
     function loopThroughLetters(elem, type, word, max){
+        var writeSpeed;
+
         type == 'add' ? num++ : num--;
+        type == 'add' ? writeSpeed = speed.typing : writeSpeed = speed.erasing;
 
         elem.style.display = 'inline-block';
         if(type == 'subtract' && num == max){
@@ -127,7 +133,7 @@
             } else if(type == 'subtract' && num > max){
                 loopThroughLetters(elem, type, word, max);
             }
-        }, speed);
+        }, writeSpeed);
     }
 
     function typeWord(elements){
@@ -136,8 +142,8 @@
         projectParent.querySelector('.project__client').setAttribute('alt', projectsInfo[count].clientAlt);
         projectParent.querySelector('.project__img').setAttribute('src', projectsInfo[count].img1);
 
-        var firstTimeoutTime = (projectsInfo[count].title[0].length + 1) * speed,
-            secondTimeoutTime = (projectsInfo[1].title[0].length + 1) * speed;
+        var firstTimeoutTime = (projectsInfo[count].title[0].length + 1) * speed.typing,
+            secondTimeoutTime = (projectsInfo[1].title[0].length + 1) * speed.typing;
 
         nextWord = projectsInfo[count].title[0];
         num = 0;

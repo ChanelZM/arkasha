@@ -124,7 +124,9 @@ nav, main {
 .insert-text:focus,
 .project__client:focus,
 .slider-handlers__arrow:focus {
-    outline-color: white;
+    outline: none;
+    outline: 10px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 .basic-link:hover {
     border-bottom: 1px solid #741242;
