@@ -81,7 +81,15 @@
                 sound.autoplay = true;
                 sound.play();
             });
+            elem.addEventListener('focus', function(){
+                sound.autoplay = true;
+                sound.play();
+            });
             elem.addEventListener('mouseleave', function(){
+                sound.pause();
+                sound.currentTime = 0;
+            });
+            elem.addEventListener('focusout', function(){
                 sound.pause();
                 sound.currentTime = 0;
             });
