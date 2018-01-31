@@ -121,7 +121,8 @@ nav, main {
     text-decoration: none;
 }
 .insert-text:focus,
-.hover-sound:focus {
+.hover-sound:focus,
+.project__loc a:focus {
     outline-color: white;
 }
 .basic-link:focus,
@@ -145,7 +146,7 @@ nav, main {
 .insert-text:before,
 .current-page:before,
 .project__title-span:before,
-.hover-sound:before{
+.hover-sound:before {
     position: absolute;
     height: 40px;
     height: 2.5rem;

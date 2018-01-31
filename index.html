@@ -65,13 +65,7 @@
         var video = document.querySelector('.fake-loader__video'),
             videoWrap = document.querySelector('.fake-loader');
 
-        window.addEventListener('load', function(e){
-            videoWrap.click();
-        });
-
-        videoWrap.addEventListener('click', function(){
-            video.play();
-        });
+        video.play();
 
         if(document.addEventListener){
             video.addEventListener('ended', function(){
