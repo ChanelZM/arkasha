@@ -1,7 +1,7 @@
 /*
 #FDE1CD BG
-#741242 Text
-#FAB642 Highlights
+#590c34 Text
+#fec240 Highlights
 #75b777 Images
 */
 @-webkit-font-face {
@@ -81,7 +81,7 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
-    color: #741242;
+    color: #590c34;
     font-family: 'Larish Neue', serif;
     background-color: #FDE1CD;
     cursor: default;
@@ -117,7 +117,7 @@ nav, main {
 .basic-link,
 .basic-link:visited {
     position: relative;
-    color: #741242;
+    color: #590c34;
     text-decoration: none;
 }
 .insert-text:focus,
@@ -133,7 +133,7 @@ nav, main {
     background-color: rgba(0, 0, 0, 0.1);
 }
 .basic-link:hover {
-    border-bottom: 1px solid #741242;
+    border-bottom: 1px solid #590c34;
 }
 .basic-link:hover, .project__client:hover {
     cursor: pointer;
@@ -153,17 +153,17 @@ nav, main {
     left: 1rem;
     right: 0;
     bottom: 32px;
-    bottom: 2rem;
-    background: -webkit-linear-gradient(left, rgba(250,182,66,0) 0%, rgba(250,182,66,1) 85%, rgba(250,182,66,1) 100%);
-    background: -o-linear-gradient(left, rgba(250,182,66,0) 0%, rgba(250,182,66,1) 85%, rgba(250,182,66,1) 100%);
-    background: linear-gradient(to right, rgba(250,182,66,0) 0%, rgba(250,182,66,1) 85%, rgba(250,182,66,1) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fab642', endColorstr='#fab642',GradientType=1 ); /* IE6-9 */
+    bottom: 2rem; /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(254,194,64,0) 0%, rgba(254,194,64,1) 13%, rgba(254,194,64,1) 100%);
+    background: -o-linear-gradient(left, rgba(254,194,64,0) 0%, rgba(254,194,64,1) 13%, rgba(254,194,64,1) 100%);
+    background: linear-gradient(to right, rgba(254,194,64,0) 0%, rgba(254,194,64,1) 13%, rgba(254,194,64,1) 100%); /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fec240', endColorstr='#fec240',GradientType=1 );
     content: '';
     z-index: -1;
 }
 .hover-sound {
-    height: 3.8rem;
-    border-bottom: 1px solid #741242;
+    line-height: 1;
+    border-bottom: 1px solid #590c34;
 }
 
 /* TOP NAV */
@@ -333,8 +333,6 @@ nav, main {
     display: inline-block;
 }
 .animate-border {
-    padding-right: 16px;
-    padding-right: 1rem;
     border-right: 6px solid white;
     -webkit-animation: blinkBorder 500ms step-end infinite;
     -moz-animation: blinkBorder 500ms step-end infinite;
@@ -511,7 +509,7 @@ nav, main {
     transform: translate(-50%, -50%);
 }
 .project__link:hover {
-    border-bottom: 2px solid #741242;
+    border-bottom: 2px solid #590c34;
     cursor: pointer;
     cursor: url('../img/pointer.png'), pointer;
 }
@@ -570,7 +568,7 @@ nav, main {
     transform: scale(1.4);
 }
 .project__client:visited {
-    color: #741242;
+    color: #590c34;
 }
 .slider-handlers__arrow {
     -webkit-appearance: none;
