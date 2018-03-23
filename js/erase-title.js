@@ -28,9 +28,9 @@
         for(i = 0; i < projects.length; i++){
             projectsInfo.push({
                 title: getTitle(projects[i]),
-                href: projects[i].querySelector('.project__link').getAttribute('href'),
                 clientSrc: projects[i].querySelector('.project__client').getAttribute('src'),
                 clientAlt: projects[i].querySelector('.project__client').getAttribute('alt'),
+                href: projects[i].querySelector('.project__loc').getAttribute('href'),
                 img1: projects[i].querySelector('.project__img').getAttribute('src')
             });
         }

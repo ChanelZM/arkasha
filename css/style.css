@@ -313,7 +313,7 @@ nav, main {
 @supports (max-width: 100rem){
     .opening-word {
         padding-top: 2rem;
-        margin: 7rem auto 0 auto;
+        margin: 1rem auto 0 auto;
         max-width: 100rem;
     }
 }
@@ -345,7 +345,7 @@ nav, main {
     top: 0;
     bottom: 0;
     right: 0;
-    background-color: #fce3d1;
+    background-color: #fdefff;
     z-index: 2;
 }
 .fake-loader__video, .fake-loader__gif {
@@ -409,6 +409,24 @@ nav, main {
 .project__img {
     position: absolute;
     transition: 1s ease opacity;
+}
+[src="../img/uganda.png"] {
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+[src="../img/dani.png"] {
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 [src="../img/alone.png"] {
     bottom: -23%;
@@ -555,6 +573,7 @@ nav, main {
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
+    z-index: 10;
 }
 .project__client {
     display: block;
