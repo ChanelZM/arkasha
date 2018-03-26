@@ -140,6 +140,7 @@
 
     function typeWord(elements){
         projectParent.querySelector('.project__link').setAttribute('href', projectsInfo[count].href);
+        projectParent.querySelector('.project__loc-link').setAttribute('href', projectsInfo[count].href);
         projectParent.querySelector('.project__client').setAttribute('src', projectsInfo[count].clientSrc);
         projectParent.querySelector('.project__client').setAttribute('alt', projectsInfo[count].clientAlt);
         projectParent.querySelector('.project__img').setAttribute('src', projectsInfo[count].img1);
