@@ -30,7 +30,7 @@
                 title: getTitle(projects[i]),
                 clientSrc: projects[i].querySelector('.project__client').getAttribute('src'),
                 clientAlt: projects[i].querySelector('.project__client').getAttribute('alt'),
-                href: projects[i].querySelector('.project__loc').getAttribute('href'),
+                href: projects[i].querySelector('.project__link').getAttribute('href'),
                 img1: projects[i].querySelector('.project__img').getAttribute('src')
             });
         }
